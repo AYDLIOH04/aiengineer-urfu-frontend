@@ -1,3 +1,52 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0, 0%, 100%;
+    --primary: 0, 0%, 12%;
+    --secondary: 0, 0%, 100%;
+    --accent: 203, 89%, 22%;
+    --orange: 34, 100%, 46%;
+    --scroll-background: 0, 0%, 100%;
+    --scroll: 203, 89%, 22%;
+  }
+
+  body {
+    @apply bg-background text-primary;
+  }
+
+  .dark {
+    /* TODO */
+  }
+
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: hsl(var(--scroll));
+    border-radius: 12px;
+    border: 2px solid hsl(var(--scroll-background));
+    transition: border 1s;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    border: 0.7px solid hsl(var(--scroll-background));
+  }
+}
+
+@layer components {
+  .header-container {
+    @apply max-w-[1610px] mx-auto px-4;
+  }
+
+  .full-screen {
+    @apply min-h-[calc(100vh-60px)];
+  }
+
+  .container {
+    @apply max-w-[1280px] mx-auto;
+  }
+}
