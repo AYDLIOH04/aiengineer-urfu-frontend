@@ -39,7 +39,7 @@
 
 @layer components {
   .header-container {
-    @apply max-w-[1610px] mx-auto px-4;
+    @apply mx-auto max-w-[1610px] px-4;
   }
 
   .full-screen {
@@ -47,6 +47,28 @@
   }
 
   .container {
-    @apply max-w-[1280px] mx-auto;
+    @apply max-w-[1280px] px-8 xl:mx-auto laptop:px-0;
   }
+}
+
+.swiper {
+  position: static !important;
+  width: 900px !important;
+}
+
+@media (max-width: 992px) {
+  .swiper {
+    width: 100vw !important;
+  }
+}
+
+.swiper-pagination {
+  position: absolute !important;
+  bottom: -30px !important;
+}
+
+.swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+  background: hsl(--primary) !important;
 }

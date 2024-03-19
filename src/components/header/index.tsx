@@ -1,16 +1,22 @@
 'use client';
 
+import { useScrollOffset } from '@/hooks';
 import Image from 'next/image';
-import { headerLinks } from '@/constants';
-import Link from 'next/link';
+import { PageSettings } from './settings';
+import { Menu } from './menu';
+import { Navbar } from './navbar';
+import clsx from 'clsx';
+
 export const Header = () => {
-  const scrollToId = (id: string) => {
-    const element = document.querySelector(id);
-    element?.scrollIntoView({ behavior: 'smooth' });
-  };
+  const scrolled = useScrollOffset(80);
 
   return (
-    <header className="h-[60px]">
+    <header
+      className={clsx(
+        'h-[60px] z-[50] fixed top-0 left-0 right-0 bg-secondary',
+        { 'shadow-md': scrolled }
+      )}
+    >
       <div className="header-container">
         <nav className="flex justify-between items-center">
           <Image
@@ -20,28 +26,11 @@ export const Header = () => {
             width={86}
             height={50}
           />
-          <ul className="flex justify-between items-center gap-10">
-            <Link
-              href="/"
-              className="text-accent text-[20px] font-[400] cursor-pointer"
-            >
-              Все программы
-            </Link>
-            {headerLinks.map((link) => (
-              <a
-                key={link.id}
-                className="text-accent text-[20px] font-[400] cursor-pointer"
-                onClick={() => scrollToId(link.href)}
-              >
-                {link.label}
-              </a>
-            ))}
-          </ul>
-          <ul className="flex justify-center items-center gap-[10px]">
-            <li className="w-[45px] h-[45px] bg-[#eee] rounded-full"></li>
-            <li className="w-[45px] h-[45px] bg-[#eee] rounded-full"></li>
-            <li className="w-[45px] h-[45px] bg-[#eee] rounded-full"></li>
-          </ul>
+          <Navbar />
+          <div className="flex gap-2">
+            <PageSettings />
+            <Menu />
+          </div>
         </nav>
       </div>
     </header>

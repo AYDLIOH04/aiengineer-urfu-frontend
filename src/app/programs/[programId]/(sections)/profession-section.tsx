@@ -1,13 +1,12 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import Image from 'next/image';
+import { motion } from "framer-motion";
 
 export const ProfessionSection = ({ data }: any) => {
   const { title, list } = data;
   return (
-    <section className="mt-[240px] overflow-hidden">
-      <div className="container flex justify-center gap-10">
+    <section className="mt-[140px] overflow-hidden md:mt-[240px]">
+      <div className="container flex flex-col justify-center gap-10 md:flex-row">
         <div>
           <motion.h2
             initial={{ x: -100, opacity: 0 }}
@@ -15,10 +14,10 @@ export const ProfessionSection = ({ data }: any) => {
             viewport={{ once: true }}
             transition={{
               duration: 0.5,
-              ease: 'easeOut',
+              ease: "easeOut",
               delay: 0.4,
             }}
-            className="text-accent text-[44px] font-[600] mb-[40px]"
+            className="mb-[40px] text-center text-[28px] font-semibold text-accent md:text-left md:text-[32px] lg:text-[36px] laptop:text-[44px]"
           >
             Перспективная профессия
           </motion.h2>
@@ -28,17 +27,22 @@ export const ProfessionSection = ({ data }: any) => {
             viewport={{ once: true }}
             transition={{
               duration: 0.5,
-              ease: 'easeOut',
+              ease: "easeOut",
               delay: 0.7,
             }}
           >
-            <p className="font-[600] text-[22px] mb-[40px] mr-32">{title}</p>
-            <p className="text-[22px] mb-[30px] mr-20">
+            <p className="mb-[40px] text-center text-[16px] font-semibold md:mr-32 md:text-left md:text-[18px] lg:text-[20px] laptop:text-[22px]">
+              {title}
+            </p>
+            <p className="mb-[30px] text-[16px] md:mr-20 md:text-[18px] lg:text-[20px] laptop:text-[22px]">
               После выпуска вы сможете работать на таких позициях, как:
             </p>
             <ul>
               {list.map((item: any, index: number) => (
-                <li key={index} className="ml-8 text-[22px] list-disc">
+                <li
+                  key={index}
+                  className="ml-8 list-disc text-[16px] md:text-[18px] lg:text-[20px] laptop:text-[22px]"
+                >
                   {item}
                 </li>
               ))}
@@ -51,11 +55,11 @@ export const ProfessionSection = ({ data }: any) => {
           viewport={{ once: true }}
           transition={{
             duration: 0.5,
-            ease: 'easeOut',
+            ease: "easeOut",
           }}
           src="/lorem.png"
           alt="Profession"
-          className="w-full overflow-hidden"
+          className="w-full overflow-hidden object-contain"
         />
       </div>
     </section>

@@ -1,21 +1,20 @@
-import type { Metadata } from 'next';
-import { Montserrat } from 'next/font/google';
-import './globals.css';
-import { Header } from '@/components/header';
+import type { Metadata } from "next";
+import { Montserrat } from "next/font/google";
+import "./globals.css";
 
-const monserrat = Montserrat({ subsets: ['latin'] });
+const monserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Инженерия искусственного интеллекта',
-  description: 'Магистерская программа ИРИТ-РТФ УрФУ',
+  title: "Инженерия искусственного интеллекта",
+  description: "Магистерская программа ИРИТ-РТФ УрФУ",
   openGraph: {
-    title: 'Инженерия искусственного интеллекта',
-    description: 'Магистерская программа ИРИТ-РТФ УрФУ',
-    type: 'website',
-    locale: 'ru_RU',
-    url: 'https://aiengineer-urfu.vercel.app',
+    title: "Инженерия искусственного интеллекта",
+    description: "Магистерская программа ИРИТ-РТФ УрФУ",
+    type: "website",
+    locale: "ru_RU",
+    url: "https://aiengineer-urfu.vercel.app",
     images: [
-      'https://static.tildacdn.com/tild3235-6237-4233-b233-336365613037/-/resize/504x/Logotip_RTF.png',
+      "https://static.tildacdn.com/tild3235-6237-4233-b233-336365613037/-/resize/504x/Logotip_RTF.png",
     ],
   },
 };
@@ -27,10 +26,7 @@ const RootLayout = ({
 }>) => {
   return (
     <html lang="en">
-      <body className={monserrat.className}>
-        <Header />
-        <main>{children}</main>
-      </body>
+      <body className={monserrat.className}>{children}</body>
     </html>
   );
 };

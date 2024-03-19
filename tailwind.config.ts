@@ -24,7 +24,15 @@ const config: Config = {
         orange: 'hsl(var(--orange))',
         scrollBackground: 'hsl(var(--scroll-background))',
         scroll: 'hsl(var(--scroll))',
-      }
+      },
+      screens: {
+        sm: "640px", // Small screens
+        md: "768px", // Medium screens
+        lg: "1024px", // Large screens
+        xl: "1280px", // Extra-large screens
+        laptop: "1440px", // Extra-large screens
+        gl: "1920px",
+      },
     },
   },
   plugins: [],

@@ -9,7 +9,7 @@ import {
   ProfessionSection,
   QuestionSection,
   ReviewsSection,
-  StudentSection,
+  EnterInstituteSection,
   TestSection,
 } from './(sections)';
 import { ScrollButton } from '@/components';
@@ -24,7 +24,7 @@ const ProgramPage = ({ params }: { params: { programId: string } }) => {
       <EducationPlanSection />
       <EmployeesSection />
       <PartnersSection />
-      <StudentSection />
+      <EnterInstituteSection />
       <ReviewsSection />
       <FaqSection />
       <QuestionSection />

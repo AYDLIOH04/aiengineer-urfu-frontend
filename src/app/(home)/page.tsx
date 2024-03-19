@@ -4,7 +4,7 @@ import Link from 'next/link';
 const HomePage = () => {
   return (
     <section>
-      <div className="flex justify-center items-center full-screen">
+      <div className="flex justify-center items-center h-screen">
         <Link href="/programs/1">
           <Button>Демо страница программы</Button>
         </Link>

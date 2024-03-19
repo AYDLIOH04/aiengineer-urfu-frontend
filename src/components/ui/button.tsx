@@ -1,14 +1,15 @@
-import clsx from 'clsx';
+import clsx from "clsx";
 
 type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {};
 
-export const Button = ({ children, className }: ButtonProps) => {
+export const Button = ({ children, className, ...props }: ButtonProps) => {
   return (
     <button
       className={clsx(
-        'bg-orange hover:opacity-80 duration-200 text-secondary text-[22px] px-[54px] py-4',
-        className
+        "rounded-md bg-orange px-8 py-3 text-[16px] text-secondary duration-200 hover:opacity-80 sm:px-14 sm:py-4 md:text-[22px]",
+        className,
       )}
+      {...props}
     >
       {children}
     </button>

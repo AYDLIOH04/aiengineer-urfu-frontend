@@ -7,5 +7,5 @@ export * from './partners-section';
 export * from './profession-section';
 export * from './question-section';
 export * from './reviews-section';
-export * from './student-section';
+export * from './enter-institute-section';
 export * from './test-section';

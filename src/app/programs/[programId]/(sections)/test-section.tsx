@@ -1,15 +1,11 @@
-import { Button } from '@/components/ui';
+import { Test } from "@/components";
+import { questionsData } from "@/mocks/program";
 
 export const TestSection = () => {
   return (
-    <section className="bg-accent h-[450px] mt-[120px]">
-      <div className="container flex h-full justify-center items-center">
-        <div className="text-center">
-          <h2 className="text-secondary font-[600] text-[40px] mb-[60px]">
-            Хотите понять подходит ли вам программа?
-          </h2>
-          <Button className="px-[32px]">Пройти тестирование</Button>
-        </div>
+    <section className="mt-[120px] h-[500px] bg-accent">
+      <div className="container flex h-full items-center justify-center overflow-hidden">
+        <Test questions={questionsData} />
       </div>
     </section>
   );
