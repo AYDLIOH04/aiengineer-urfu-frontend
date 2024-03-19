@@ -34,9 +34,9 @@ export const MenuNavbar = ({
           transition={{
             duration: 0.5,
           }}
-          className="fixed right-0 top-0 bg-accent text-secondary md:w-[350px] z-[50] w-2/3 h-[200vh]"
+          className="fixed right-0 top-0 bg-accent text-secondary md:w-[350px] z-[50] w-2/3 h-full"
         >
-          <div className="py-20 flex flex-col gap-10 justify-between items-center h-full">
+          <div className="py-20 flex flex-col gap-10 justify-between items-center h-[100vh]">
             <div className="mx-4 text-center">
               <Link href="/" className="text-[20px] font-[400] cursor-pointer">
                 Все программы
