@@ -13,7 +13,7 @@ export const Header = () => {
   return (
     <header
       className={clsx(
-        'h-[60px] z-[50] fixed top-0 left-0 right-0 bg-secondary',
+        'h-[60px] z-[50] fixed top-0 left-0 right-0 bg-header',
         { 'shadow-md': scrolled }
       )}
     >

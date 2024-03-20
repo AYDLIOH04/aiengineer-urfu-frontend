@@ -37,11 +37,11 @@ export const ProfessionSection = ({ data }: any) => {
             <p className="mb-[30px] leading-6 md:leading-8 text-[16px] md:mr-20 md:text-[18px] lg:text-[20px] laptop:text-[22px]">
               После выпуска вы сможете работать на таких позициях, как:
             </p>
-            <ul>
+            <ul className="list-disc">
               {list.map((item: any, index: number) => (
                 <li
                   key={index}
-                  className="ml-8 list-disc text-[16px] md:text-[18px] lg:text-[20px] laptop:text-[22px]"
+                  className="ml-8 text-[16px] md:text-[18px] lg:text-[20px] laptop:text-[22px]"
                 >
                   {item}
                 </li>

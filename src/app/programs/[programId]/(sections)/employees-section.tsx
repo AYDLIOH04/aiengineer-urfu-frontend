@@ -1,5 +1,5 @@
 export const EmployeesSection = () => {
   return (
-    <section id="employees">employees-section</section>
+    <section id="employees" className="h-screen">employees-section</section>
   )
 }

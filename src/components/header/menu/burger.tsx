@@ -12,7 +12,7 @@ export const MenuBurger = ({
   return (
     <div
       onClick={onToggle}
-      className="text-primary text-[28px] w-[45px] h-[45px] bg-[#eee] z-[51] rounded-full flex justify-center items-center"
+      className="text-primary text-[28px] w-[45px] h-[45px] bg-foreground z-[51] rounded-full flex justify-center items-center"
     >
       <BurgerIcon />
     </div>

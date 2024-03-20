@@ -3,14 +3,23 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-export const AboutSection = ({ data }: any) => {
+export const AboutSection = ({ data }: { data: any }) => {
   return (
-    <section className="mt-[80px]" id="about">
+    <section className="mt-20" id="about">
       <div className="container">
-        <h2 className="text-center text-[28px] font-semibold text-accent md:text-[40px] lg:text-[44px]">
+        <motion.h2
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{
+            duration: 0.4,
+            ease: "easeOut",
+          }}
+          viewport={{ once: true }}
+          className="text-center text-[28px] font-semibold text-accent md:text-[40px] lg:text-[44px]"
+        >
           О программе
-        </h2>
-        <ul className="mt-[80px] grid grid-cols-1 gap-14 md:grid-cols-2 md:gap-20 xl:grid-cols-3">
+        </motion.h2>
+        <ul className="mt-20 grid grid-cols-1 gap-14 md:grid-cols-2 md:gap-20 xl:grid-cols-3">
           {data.map((item: any, index: number) => (
             <motion.div
               initial={{ y: 100, opacity: 0 }}

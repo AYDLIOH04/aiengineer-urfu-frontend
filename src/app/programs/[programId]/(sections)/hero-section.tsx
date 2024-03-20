@@ -8,7 +8,7 @@ import { scrollToId } from "@/utils";
 const hInfoStyles = "mb-3 laptop:text-[28px] text-[24px] font-semibold";
 const pInfoStyles = "laptop:text-[22px] text-[16px]";
 
-export const HeroSection = ({ data }: any) => {
+export const HeroSection = ({ data }: { data: any }) => {
   const { title, mags, learn, direction, format, duration, places } = data;
   return (
     <section className="full-screen relative flex overflow-hidden bg-accent text-secondary">

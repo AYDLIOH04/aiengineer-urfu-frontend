@@ -18,6 +18,9 @@ const config: Config = {
       },
       colors: {
         background: 'hsl(var(--background))',
+        foreground: 'hsl(var(--foreground))',
+        header: 'hsl(var(--header))',
+        footer: 'hsl(var(--footer))',
         primary: 'hsl(var(--primary))',
         secondary: 'hsl(var(--secondary))',
         accent: 'hsl(var(--accent))',

@@ -1,4 +1,4 @@
-import { aboutData, heroData, professionData } from '@/mocks/program';
+import { aboutData, heroData, professionData, educationPlanData } from '@/mocks/program';
 import {
   AboutSection,
   EducationPlanSection,
@@ -21,7 +21,7 @@ const ProgramPage = ({ params }: { params: { programId: string } }) => {
       <AboutSection data={aboutData} />
       <ProfessionSection data={professionData} />
       <TestSection />
-      <EducationPlanSection />
+      <EducationPlanSection data={educationPlanData} />
       <EmployeesSection />
       <PartnersSection />
       <EnterInstituteSection />
