@@ -129,7 +129,29 @@ export const educationPlanData: any = [
   },
 ];
 
-export const bossData: any = {
-  boss: "Харизов Азамат Робертович",
-  desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores at corrupti expedita voluptatum labore doloremque voluptatem consequuntur inventore quia quis, adipisci quo, a nobis facilis, illum velit rem maxime optio!",
-};
+export const employeesData: any = [
+  {
+    name: "Харизов Азамат Робертович",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores at corrupti expedita voluptatum labore dolon remque voluptatem consequuntur inventore quia quis, adipisci quo, a nobis facilis, illum velit rem maxime optio!",
+  },
+  {
+    name: "Юрий Чернышов",
+    desc: "Кандидат физико-математических наук, доцент, руководитель лаборатории по кибербезопасности УЦСБ и ИРИТ-РтФ",
+  },
+  {
+    name: "Андрей Созыкин",
+    desc: "Кандидат технических наук, доцент, директор школы магистратуры ИРИТ-РТФ УрФУ",
+  },
+  {
+    name: "Илья Обабков",
+    desc: "Кандидат технических наук, доцент, директор института радиоэлектроники и информационных технологий-РТФ УрФУ",
+  },
+  {
+    name: "Василий Борисов",
+    desc: "Кандидат технических наук, доцент",
+  },
+  {
+    name: "Святослав Солодушкин",
+    desc: "Кандидат физико-математических наук, доцент",
+  },
+];

@@ -3,7 +3,7 @@ import {
   heroData,
   professionData,
   educationPlanData,
-  bossData,
+  employeesData,
 } from "@/mocks/program";
 import {
   AboutSection,
@@ -29,9 +29,9 @@ const ProgramPage = ({ params }: { params: { programId: string } }) => {
       <ProfessionSection data={professionData} />
       <TestSection />
       <EducationPlanSection data={educationPlanData} />
-      <div className="mt-[140px] bg-foreground flex py-[100px] flex-col gap-[100px]">
-        <BossSection data={bossData} />
-        <EmployeesSection />
+      <div className="mt-[140px] bg-foreground flex py-[100px] flex-col gap-[140px]">
+        <BossSection data={employeesData[0]} />
+        <EmployeesSection data={employeesData} />
       </div>
       <PartnersSection />
       <EnterInstituteSection />

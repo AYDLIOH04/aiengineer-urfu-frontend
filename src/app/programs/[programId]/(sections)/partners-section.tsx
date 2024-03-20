@@ -1,5 +1,3 @@
 export const PartnersSection = () => {
-  return (
-    <div>partners-section</div>
-  )
-}
+  return <section className="h-screen">partners-section</section>;
+};
