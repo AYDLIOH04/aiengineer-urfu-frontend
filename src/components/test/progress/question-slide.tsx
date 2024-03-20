@@ -16,14 +16,14 @@ export const QuestionSlide = ({
   };
 
   return (
-    <div className="mx-auto my-8 w-[350px] px-5 md:w-[400px] lg:w-[650px]">
+    <div className="mx-auto my-8 sm:w-[350px] w-[300px] px-5 md:w-[400px] lg:w-[650px]">
       <h4 className="mb-8 text-center text-[20px] font-semibold md:text-[24px]">
         {data.question}
       </h4>
       <ul className="mx-auto">
         {data.answers.map((answer: string, answerIndex: number) => (
           <li key={answerIndex}>
-            <label className="flex flex-row items-center gap-2">
+            <label className="flex flex-row items-center gap-2 cursor-pointer">
               <input
                 type="checkbox"
                 name="question"

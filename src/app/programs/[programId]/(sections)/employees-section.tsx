@@ -21,7 +21,7 @@ export const EmployeesSection = ({ data }: { data: any }) => {
         >
           Команда преподавателей
         </motion.h2>
-        <div className="relative flex h-[550px] xl:w-[1200px] w-screen items-center justify-center">
+        <div className="relative flex h-[550px] xl:w-[1200px] w-screen items-center justify-center cursor-grab">
           <DinamicSwiper>
             {data?.map((item: any, itemIndex: number) => (
               <SwiperSlide key={itemIndex}>
@@ -38,7 +38,7 @@ export const EmployeesSection = ({ data }: { data: any }) => {
 const EmployeeSlide = ({ data }: { data: any }) => {
   const { name, desc } = data;
   return (
-    <div className="h-full w-full">
+    <div className="h-full w-full select-none">
       <Image
         width={100}
         height={100}
@@ -50,7 +50,7 @@ const EmployeeSlide = ({ data }: { data: any }) => {
         <h3 className="text-[18px] text-accent mb-4 font-semibold">
           {name.split(" ").slice(0, 2).join(" ")}
         </h3>
-        <p className="text-[16px]">{desc}</p>
+        <p className="text-[14px]">{desc}</p>
       </div>
     </div>
   );
