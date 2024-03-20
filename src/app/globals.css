@@ -97,6 +97,12 @@
   }
 }
 
+@media (max-width: 420px) {
+  .dinamic-swiper {
+    width: 272px !important;
+  }
+}
+
 .swiper-pagination {
   position: absolute !important;
   bottom: -30px !important;
