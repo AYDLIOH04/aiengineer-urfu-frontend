@@ -17,7 +17,7 @@ export const ProfessionSection = ({ data }: any) => {
               ease: "easeOut",
               delay: 0.4,
             }}
-            className="mb-[40px] text-center text-[28px] font-semibold text-accent md:text-left md:text-[32px] lg:text-[36px] laptop:text-[44px]"
+            className="mb-[40px] leading-8 text-center text-[28px] font-semibold text-accent md:text-left md:text-[32px] lg:text-[36px] laptop:text-[44px]"
           >
             Перспективная профессия
           </motion.h2>
@@ -31,10 +31,10 @@ export const ProfessionSection = ({ data }: any) => {
               delay: 0.7,
             }}
           >
-            <p className="mb-[40px] text-center text-[16px] font-semibold md:mr-32 md:text-left md:text-[18px] lg:text-[20px] laptop:text-[22px]">
+            <p className="mb-[40px] leading-6 md:leading-8 text-[16px] font-semibold md:mr-32 md:text-left md:text-[18px] lg:text-[20px] laptop:text-[22px]">
               {title}
             </p>
-            <p className="mb-[30px] text-[16px] md:mr-20 md:text-[18px] lg:text-[20px] laptop:text-[22px]">
+            <p className="mb-[30px] leading-6 md:leading-8 text-[16px] md:mr-20 md:text-[18px] lg:text-[20px] laptop:text-[22px]">
               После выпуска вы сможете работать на таких позициях, как:
             </p>
             <ul>

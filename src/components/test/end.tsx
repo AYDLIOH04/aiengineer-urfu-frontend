@@ -20,7 +20,7 @@ export const EndTest = ({ answers }: { answers: any }) => {
         <span>
           <Link
             href="/"
-            className="relative after:absolute after:-bottom-1.5 after:left-0 after:right-0 after:mx-auto after:h-0.5 after:w-1/3 after:rounded-md after:bg-secondary  after:duration-300 hover:after:w-3/4"
+            className="relative sm:inline block after:absolute after:-bottom-1.5 after:left-0 after:right-0 after:mx-auto after:h-0.5 after:w-1/3 after:rounded-md after:bg-secondary  after:duration-300 hover:after:w-3/4"
           >
             рекомендуемые программы?
           </Link>

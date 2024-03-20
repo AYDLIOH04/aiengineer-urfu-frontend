@@ -33,7 +33,7 @@ const PrevButton = ({ className }: { className?: string }) => {
   return (
     <button
       className={clsx(
-        "absolute left-0 top-1/2 z-[99] hidden rounded-full p-2 text-[30px] transition hover:bg-secondary hover:text-accent md:block xl:-left-16",
+        "absolute md:left-4 top-1/2 z-[99] rounded-full p-2 text-[30px] transition md:hover:bg-secondary md:hover:text-accent block xl:-left-16",
         className,
       )}
       onClick={() => swiper.slidePrev()}
@@ -48,7 +48,7 @@ const NextButton = ({ className }: { className?: string }) => {
   return (
     <button
       className={clsx(
-        "absolute right-0 top-1/2 z-[99] hidden rounded-full p-2 text-[30px] transition hover:bg-secondary hover:text-accent md:block xl:-right-16",
+        "absolute md:right-4 right-0 top-1/2 z-[99] rounded-full p-2 text-[30px] transition md:hover:bg-secondary md:hover:text-accent block xl:-right-16",
         className,
       )}
       onClick={() => swiper.slideNext()}
