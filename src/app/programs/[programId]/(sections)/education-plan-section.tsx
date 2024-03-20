@@ -19,11 +19,18 @@ export const EducationPlanSection = ({ data }: { data: any }) => {
         >
           Учебный план
         </motion.h2>
-        
-        <div className="mt-20 mx-auto max-w-[840px] relative before:absolute before:top-0 before:left-0 before:rounded-md before:right-0 before:h-0.5 before:w-full before:bg-accent">
-          {data.map(({ title, list }: { title: string; list: string[] }) => (
-            <Accordion key={title} title={title} list={list} />
-          ))}
+
+        <div className="relative mx-auto mt-20 max-w-[840px] before:absolute before:left-0 before:right-0 before:top-0 before:h-0.5 before:w-full before:rounded-md before:bg-accent">
+          {data.map((item: any, itemIndex: number) =>
+            (
+              <Accordion
+                key={itemIndex}
+                title={item.title}
+                list={item.list}
+                animateIndex={itemIndex}
+              />
+            ),
+          )}
         </div>
       </div>
     </section>

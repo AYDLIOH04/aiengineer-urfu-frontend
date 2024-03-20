@@ -1,13 +1,16 @@
 import clsx from "clsx";
+import { motion } from "framer-motion";
 import { useState } from "react";
 import { PiPlusLight } from "react-icons/pi";
 
 export const Accordion = ({
   title,
   list,
+  animateIndex
 }: {
   title: string;
   list: string[];
+  animateIndex: number;
 }) => {
   const [open, setOpen] = useState(false);
 
@@ -16,7 +19,15 @@ export const Accordion = ({
   };
 
   return (
-    <div>
+    <motion.div
+      initial={{ y: 100, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{
+        duration: 0.2 * (animateIndex + 1),
+        ease: "easeOut",
+      }}
+      viewport={{ once: true }}
+    >
       <div
         className="group flex flex-row items-center justify-between py-2 md:py-5"
         onClick={onOpenToggle}
@@ -45,6 +56,6 @@ export const Accordion = ({
           </ul>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
