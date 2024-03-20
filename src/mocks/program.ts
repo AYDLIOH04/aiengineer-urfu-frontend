@@ -128,3 +128,8 @@ export const educationPlanData: any = [
     ],
   },
 ];
+
+export const bossData: any = {
+  boss: "Харизов Азамат Робертович",
+  desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores at corrupti expedita voluptatum labore doloremque voluptatem consequuntur inventore quia quis, adipisci quo, a nobis facilis, illum velit rem maxime optio!",
+};

@@ -1,4 +1,10 @@
-import { aboutData, heroData, professionData, educationPlanData } from '@/mocks/program';
+import {
+  aboutData,
+  heroData,
+  professionData,
+  educationPlanData,
+  bossData,
+} from "@/mocks/program";
 import {
   AboutSection,
   EducationPlanSection,
@@ -11,8 +17,9 @@ import {
   ReviewsSection,
   EnterInstituteSection,
   TestSection,
-} from './(sections)';
-import { ScrollButton } from '@/components';
+  BossSection,
+} from "./(sections)";
+import { ScrollButton } from "@/components";
 
 const ProgramPage = ({ params }: { params: { programId: string } }) => {
   return (
@@ -22,7 +29,10 @@ const ProgramPage = ({ params }: { params: { programId: string } }) => {
       <ProfessionSection data={professionData} />
       <TestSection />
       <EducationPlanSection data={educationPlanData} />
-      <EmployeesSection />
+      <div className="mt-[140px] bg-foreground flex py-[100px] flex-col gap-[100px]">
+        <BossSection data={bossData} />
+        <EmployeesSection />
+      </div>
       <PartnersSection />
       <EnterInstituteSection />
       <ReviewsSection />

@@ -15,7 +15,7 @@ export const AboutSection = ({ data }: { data: any }) => {
             ease: "easeOut",
           }}
           viewport={{ once: true }}
-          className="text-center text-[28px] font-semibold text-accent md:text-[40px] lg:text-[44px]"
+          className="text-center text-[28px] font-semibold text-accent md:text-[40px] lg:text-[40px]"
         >
           О программе
         </motion.h2>

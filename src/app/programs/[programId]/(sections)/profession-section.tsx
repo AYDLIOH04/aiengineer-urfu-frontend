@@ -7,7 +7,7 @@ export const ProfessionSection = ({ data }: any) => {
   return (
     <section className="mt-[140px] overflow-hidden md:mt-[240px]">
       <div className="container flex flex-col justify-center gap-10 md:flex-row">
-        <div>
+        <div className="lg:w-1/2 md:w-2/3 w-full">
           <motion.h2
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
@@ -17,7 +17,7 @@ export const ProfessionSection = ({ data }: any) => {
               ease: "easeOut",
               delay: 0.4,
             }}
-            className="mb-[40px] leading-8 text-center text-[28px] font-semibold text-accent md:text-left md:text-[32px] lg:text-[36px] laptop:text-[44px]"
+            className="mb-[40px] leading-8 text-left text-[22px] font-semibold text-accent md:text-[28px] lg:text-[32px]"
           >
             Перспективная профессия
           </motion.h2>
@@ -59,7 +59,7 @@ export const ProfessionSection = ({ data }: any) => {
           }}
           src="/lorem.png"
           alt="Profession"
-          className="w-full overflow-hidden object-contain"
+          className="lg:w-1/2 md:w-1/3 sm:w-1/2 w-full mx-auto overflow-hidden object-contain"
         />
       </div>
     </section>

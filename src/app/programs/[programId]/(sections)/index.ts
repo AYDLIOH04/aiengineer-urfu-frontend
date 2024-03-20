@@ -9,3 +9,4 @@ export * from './question-section';
 export * from './reviews-section';
 export * from './enter-institute-section';
 export * from './test-section';
+export * from './boss-section';
