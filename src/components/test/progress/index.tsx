@@ -23,12 +23,14 @@ export const ProgressTest = ({
         setCurrentNum={setCurrentNum}
         setAnswers={setAnswers}
       />
-      <Button
-        className="mb-4 sm:px-7 sm:py-2 md:text-[18px]"
-        onClick={onEndClick}
-      >
-        Завершить тестирование
-      </Button>
+      {currentNum === questions.length && (
+        <Button
+          className="mb-4 sm:px-7 sm:py-2 md:text-[18px]"
+          onClick={onEndClick}
+        >
+          Завершить тестирование
+        </Button>
+      )}
     </div>
   );
 };
