@@ -18,6 +18,6 @@ export const useResize = () => {
 
   return {
     width,
-    isMobile: width <= SCREEN_MD,
+    isMobile: width <= SCREEN_MD && width !== 0,
   };
 };

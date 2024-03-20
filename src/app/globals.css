@@ -95,6 +95,10 @@
   .dinamic-swiper {
     width: 300px !important;
   }
+
+  .timelime-mobile {
+    @apply after:-left-[11px];
+  }
 }
 
 @media (max-width: 420px) {
