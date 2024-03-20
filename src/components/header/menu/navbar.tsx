@@ -57,7 +57,7 @@ export const MenuNavbar = ({
             <Image
               width={200}
               height={200}
-              src="/irit-rtf-logo.svg"
+              src="/logo-irit-rtf.png"
               alt="IRIT-RTF Logo"
             />
           </div>

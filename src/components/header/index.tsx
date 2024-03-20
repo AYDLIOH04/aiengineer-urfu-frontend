@@ -21,7 +21,7 @@ export const Header = () => {
         <nav className="flex justify-between items-center">
           <Image
             className="my-[5px]"
-            src="/irit-rtf-logo.svg"
+            src="/logo-irit-rtf.png"
             alt="IRIT-RTF Logo"
             width={86}
             height={50}
