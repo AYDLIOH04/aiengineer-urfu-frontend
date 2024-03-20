@@ -1,4 +1,4 @@
 export * from "./useScrollOffset";
 export * from "./useEscapeKeydown";
-export * from "./useMediaQuery";
+export * from "./useResize";
 export * from "./useClickOutside";
