@@ -155,3 +155,45 @@ export const employeesData: any = [
     desc: "Кандидат физико-математических наук, доцент",
   },
 ];
+
+export const partnersData: any = [
+  {
+    image:
+      "https://thumb.tildacdn.com/tild3330-3861-4538-b662-396166613866/-/resize/312x/-/format/webp/photo_2022-01-19_15-.jpg",
+    link: "https://kontur.ru/",
+  },
+  {
+    image:
+      "https://thumb.tildacdn.com/tild3634-3962-4334-b535-333032663938/-/resize/312x/-/format/webp/photo_2022-01-19_15-.jpg",
+    link: "https://www.ussc.ru/",
+  },
+  {
+    image:
+      "https://thumb.tildacdn.com/tild6466-6536-4836-a466-346662346336/-/resize/312x/-/format/webp/Logo_NAUMEN.png",
+    link: "https://www.naumen.ru/",
+  },
+  {
+    image:
+      "https://thumb.tildacdn.com/tild6163-3537-4339-b764-386636313534/-/resize/312x/-/format/webp/__2022-06-14__163849.png",
+    link: "https://drivecast.live/",
+  },
+];
+
+export const enterInstituteData: any = [
+  {
+    title: "Иметь диплом о высшем образовании",
+    body: "Предпочтительно в области ИТ, математики, физики, экономики или по инженерным направлениям подготовки",
+  },
+  {
+    title: "Зарегистрироваться в личном кабинете абитуриента УрФУ",
+    body: "Первый шаг к поступлению — регистрация в личном кабинете УрФУ",
+  },
+  {
+    title: "Подать документы",
+    body: "Перечень документов для поступления в 2023 году Календарь поступления",
+  },
+  {
+    title: "Пройти вступительные испытания",
+    body: "Программа испытаний Пример заданий",
+  },
+];

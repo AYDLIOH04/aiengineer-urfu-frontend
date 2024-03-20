@@ -1,3 +1,5 @@
+"use client";
+
 import { Swiper } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import { PrevButton } from "./prev-button";

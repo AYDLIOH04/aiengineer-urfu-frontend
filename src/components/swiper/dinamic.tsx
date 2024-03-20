@@ -1,3 +1,5 @@
+"use client";
+
 import { Swiper } from "swiper/react";
 import { PrevButton } from "./prev-button";
 import { NextButton } from "./next-button";
@@ -33,9 +35,9 @@ export const DinamicSwiper = ({
       pagination={{ clickable: true }}
       className="dinamic-swiper"
     >
-      <PrevButton className="text-accent left-0" />
+      <PrevButton className="left-0 text-accent" />
       {children}
-      <NextButton className="text-accent right-0" />
+      <NextButton className="right-0 text-accent" />
     </Swiper>
   );
 };

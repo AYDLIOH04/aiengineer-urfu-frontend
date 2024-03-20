@@ -4,6 +4,9 @@ import {
   professionData,
   educationPlanData,
   employeesData,
+  partnersData,
+  enterInstituteData,
+  questionsData,
 } from "@/mocks/program";
 import {
   AboutSection,
@@ -27,14 +30,14 @@ const ProgramPage = ({ params }: { params: { programId: string } }) => {
       <HeroSection data={heroData} />
       <AboutSection data={aboutData} />
       <ProfessionSection data={professionData} />
-      <TestSection />
+      <TestSection data={questionsData} />
       <EducationPlanSection data={educationPlanData} />
-      <div className="mt-[140px] bg-foreground flex py-[100px] flex-col gap-[140px]">
+      <div className="mt-[140px] flex flex-col bg-foreground">
         <BossSection data={employeesData[0]} />
         <EmployeesSection data={employeesData} />
       </div>
-      <PartnersSection />
-      <EnterInstituteSection />
+      <PartnersSection data={partnersData} />
+      <EnterInstituteSection data={enterInstituteData} />
       <ReviewsSection />
       <FaqSection />
       <QuestionSection />

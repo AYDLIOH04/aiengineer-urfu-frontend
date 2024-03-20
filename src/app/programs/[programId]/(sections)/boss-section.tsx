@@ -6,7 +6,7 @@ export const BossSection = ({ data }: { data: any }) => {
   const { name, desc } = data;
 
   return (
-    <section id="employees">
+    <section id="employees" className="py-[100px]">
       <div className="container flex flex-col items-center justify-center gap-10 md:flex-row">
         <div className="w-full md:w-2/3 lg:w-1/2">
           <motion.h2
@@ -55,7 +55,7 @@ export const BossSection = ({ data }: { data: any }) => {
               ease: "easeOut",
               delay: 1,
             }}
-            className="text-[20px]"
+            className="text-[16px]"
           >
             {desc}
           </motion.p>

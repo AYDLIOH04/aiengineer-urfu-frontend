@@ -1,7 +1,6 @@
 "use client";
 
-import { DinamicSwiper } from "@/components/swiper";
-import { motion } from "framer-motion";
+import { SectionTitle, DinamicSwiper } from "@/components";
 import Image from "next/image";
 import { SwiperSlide } from "swiper/react";
 
@@ -9,19 +8,8 @@ export const EmployeesSection = ({ data }: { data: any }) => {
   return (
     <section className="h-[800px]">
       <div className="container flex h-full flex-col items-center justify-center">
-        <motion.h2
-          initial={{ y: 100, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{
-            duration: 0.4,
-            ease: "easeOut",
-          }}
-          viewport={{ once: true }}
-          className="mb-20 text-center text-[28px] font-semibold text-accent md:text-[40px] lg:text-[44px]"
-        >
-          Команда преподавателей
-        </motion.h2>
-        <div className="relative flex h-[550px] xl:w-[1200px] w-screen items-center justify-center cursor-grab">
+        <SectionTitle>Команда преподавателей</SectionTitle>
+        <div className="relative flex h-[550px] w-screen cursor-grab items-center justify-center xl:w-[1200px]">
           <DinamicSwiper>
             {data?.map((item: any, itemIndex: number) => (
               <SwiperSlide key={itemIndex}>
@@ -46,8 +34,8 @@ const EmployeeSlide = ({ data }: { data: any }) => {
         alt="Boss"
         className="w-full object-contain"
       />
-      <div className="px-4 mt-4">
-        <h3 className="text-[18px] text-accent mb-4 font-semibold">
+      <div className="mt-4 px-4">
+        <h3 className="mb-4 text-[18px] font-semibold text-accent">
           {name.split(" ").slice(0, 2).join(" ")}
         </h3>
         <p className="text-[14px]">{desc}</p>
