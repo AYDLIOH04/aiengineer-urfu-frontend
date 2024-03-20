@@ -1,4 +1,4 @@
-import { SectionTitle } from "@/components";
+import { SectionTitle, VerticalLine } from "@/components";
 
 export const EnterInstituteSection = ({ data }: { data: any }) => {
   return (
@@ -7,6 +7,7 @@ export const EnterInstituteSection = ({ data }: { data: any }) => {
         <SectionTitle className="mb-20">
           Как стать студентом программы
         </SectionTitle>
+        <VerticalLine list={data} />
       </div>
     </section>
   );

@@ -197,3 +197,5 @@ export const enterInstituteData: any = [
     body: "Программа испытаний Пример заданий",
   },
 ];
+
+

@@ -1,3 +1,4 @@
-export * from './useScrollOffset';
-export * from './useEscapeKeydown';
-export * from './useClickOutside';
+export * from "./useScrollOffset";
+export * from "./useEscapeKeydown";
+export * from "./useMediaQuery";
+export * from "./useClickOutside";
