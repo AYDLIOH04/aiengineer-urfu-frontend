@@ -198,4 +198,21 @@ export const enterInstituteData: any = [
   },
 ];
 
-
+export const faqData: any = [
+  {
+    title: "Куда подавать документы?",
+    body: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil sit voluptatem aspernatur porro vero temporibus consequatur reiciendis, vel minus nisi sed alias ducimus culpa esse ratione dolorem. Reprehenderit, non odio!",
+  },
+  {
+    title: "Есть ли военная кафедра?",
+    body: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus dolorem quos sapiente soluta excepturi officia nulla, earum velit debitis consectetur facilis voluptate provident autem saepe est accusamus id aperiam error nisi tenetur minus praesentium ratione fuga reprehenderit! Fugit voluptas nihil cum optio asperiores, consectetur veniam ipsum sed enim, ullam quae modi suscipit ducimus et autem recusandae at aut commodi? Itaque esse pariatur voluptate explicabo doloremque harum, excepturi qui deleniti nostrum?",
+  },
+  {
+    title: "Что тяжелее, килограмм железа или ваты?",
+    body: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus dolorem quos sapiente soluta excepturi officia nulla, earum velit debitis consectetur facilis voluptate provident autem saepe est accusamus id aperiam error nisi tenetur minus praesentium ratione fuga reprehenderit! Fugit voluptas nihil cum optio asperiores, consectetur veniam ipsum sed enim, ullam q",
+  },
+  {
+    title: "Когда в этом году пасха?",
+    body: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus dolorem quos sapiente soluta excepturi officia nulla, earum velit debitis co",
+  },
+];

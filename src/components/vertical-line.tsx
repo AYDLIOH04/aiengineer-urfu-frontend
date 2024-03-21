@@ -44,10 +44,10 @@ export const VerticalLine = ({ list }: VerticalLineProps) => {
               }}
               className="pl-8 md:pl-0"
             >
-              <h3 className="mb-2 text-[20px] font-semibold text-accent">
+              <h3 className="mb-2 md:text-[20px] text-[18px] font-semibold text-accent">
                 {title}
               </h3>
-              <p className="text-[16px]">{body}</p>
+              <p className="md:text-[16px] text-[14px]">{body}</p>
             </motion.div>
           </li>
         ),

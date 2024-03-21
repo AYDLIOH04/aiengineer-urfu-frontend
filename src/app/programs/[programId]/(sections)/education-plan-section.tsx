@@ -21,7 +21,13 @@ export const EducationPlanSection = ({ data }: { data: any }) => {
               }}
               viewport={{ once: true }}
             >
-              <Accordion title={item.title} list={item.list} />
+              <Accordion title={item.title}>
+                <ul className="list-disc overflow-hidden pb-10 pl-8 text-[16px] font-light duration-1000 md:text-[20px] lg:text-[22px]">
+                  {item.list.map((listItem: any, listItemIdex: number) => (
+                    <li key={listItemIdex}>{listItem}</li>
+                  ))}
+                </ul>
+              </Accordion>
             </motion.div>
           ))}
         </div>

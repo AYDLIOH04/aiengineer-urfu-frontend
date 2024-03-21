@@ -6,10 +6,10 @@ import { PiPlusLight } from "react-icons/pi";
 
 export const Accordion = ({
   title,
-  list,
+  children,
 }: {
   title: string;
-  list: string[];
+  children: React.ReactNode;
 }) => {
   const [open, setOpen] = useState(false);
 
@@ -40,11 +40,7 @@ export const Accordion = ({
             "max-h-[1000px] duration-[1750ms] ": open,
           })}
         >
-          <ul className="list-disc overflow-hidden pb-10 pl-8 text-[16px] font-light duration-1000 md:text-[20px] lg:text-[22px]">
-            {list.map((item, itemIdex) => (
-              <li key={itemIdex}>{item}</li>
-            ))}
-          </ul>
+          {children}
         </div>
       </div>
     </>

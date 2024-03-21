@@ -1,5 +1,5 @@
 export const QuestionSection = () => {
   return (
-    <section id="question">question-section</section>
+    <section id="question" className="h-screen">question-section</section>
   )
 }
