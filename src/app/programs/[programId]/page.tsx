@@ -9,6 +9,8 @@ import {
   questionsData,
   faqData,
   reviewsData,
+  contactData,
+  footerData,
 } from "@/mocks/program";
 import {
   AboutSection,
@@ -24,7 +26,7 @@ import {
   TestSection,
   BossSection,
 } from "./(sections)";
-import { ScrollButton } from "@/components";
+import { Footer, ScrollButton } from "@/components";
 
 const ProgramPage = ({ params }: { params: { programId: string } }) => {
   return (
@@ -42,7 +44,8 @@ const ProgramPage = ({ params }: { params: { programId: string } }) => {
       <EnterInstituteSection data={enterInstituteData} />
       <ReviewsSection data={reviewsData} />
       <FaqSection data={faqData} />
-      <QuestionSection />
+      <QuestionSection data={contactData} />
+      <Footer data={footerData} />
       <ScrollButton />
     </>
   );

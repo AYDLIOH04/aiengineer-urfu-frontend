@@ -7,9 +7,9 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { FaTelegramPlane } from "react-icons/fa";
 
-export const QuestionSection = () => {
+export const QuestionSection = ({ data }: { data: any }) => {
   return (
-    <section id="question" className="mt-[170px] h-screen">
+    <section id="question" className="my-[170px]">
       <div className="container">
         <SectionTitle>Задать вопрос</SectionTitle>
         <div className="mx-auto flex max-w-[900px] flex-col items-center gap-10 text-center lg:flex-row lg:items-start lg:gap-2 lg:text-start">
@@ -24,7 +24,7 @@ export const QuestionSection = () => {
               viewport={{ once: true }}
               className="text-[24px] text-accent md:text-[28px] lg:text-[32px]"
             >
-              +7 (343) 375-93-71
+              {data.telephone}
             </motion.p>
             <motion.p
               initial={{ x: -100, opacity: 0 }}
@@ -37,7 +37,7 @@ export const QuestionSection = () => {
               viewport={{ once: true }}
               className="mb-10 text-[24px] text-accent md:text-[28px] lg:text-[32px]"
             >
-              rtf.priem@urfu.ru
+              {data.email}
             </motion.p>
             <motion.p
               initial={{ x: -100, opacity: 0 }}
@@ -50,7 +50,7 @@ export const QuestionSection = () => {
               viewport={{ once: true }}
               className="text-[16px] md:text-[20px]"
             >
-              620002, г. Екатеринбург, ул. Мира, 32
+              {data.address}
             </motion.p>
             <motion.div
               initial={{ x: -100, opacity: 0 }}
@@ -64,14 +64,14 @@ export const QuestionSection = () => {
               className="mt-4 flex flex-row justify-center gap-3 lg:justify-start"
             >
               <Link
-                href="https://web.telegram.org"
+                href={data.telegramLink}
                 target="_blank"
                 className="flex h-[45px] w-[45px] items-center justify-center rounded-full bg-accent duration-200 hover:opacity-90"
               >
                 <FaTelegramPlane className="text-[26px] text-secondary" />
               </Link>
               <Link
-                href="https://vk.com"
+                href={data.vkLink}
                 target="_blank"
                 className="flex h-[45px] w-[45px] items-center justify-center rounded-full bg-accent duration-200 hover:opacity-90"
               >

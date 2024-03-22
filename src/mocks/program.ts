@@ -247,3 +247,23 @@ export const reviewsData: any = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error tempora saepe, dolorum quaerat unde delectus a, adipisci, iure incidunt ea perspiciatis modi suscipit. Fugit explicabo dolor atque quas mollitia pariatur libero iusto aspernatur repudiandae.",
   },
 ];
+
+export const contactData: any = {
+  telephone: "+7 (343) 375-93-71",
+  email: "rtf.priem@urfu.ru",
+  address: "620002, г. Екатеринбург, ул. Мира, 32",
+  telegramLink: "https://web.telegram.org",
+  vkLink: "https://vk.com",
+};
+
+export const footerData: any = {
+  institute: "Институт радиоэлектроники и информационных технологий - РТФ",
+  email: "priem-rtf.urfu.ru",
+  telegramLink: "https://web.telegram.org",
+  vkLink: "https://vk.com",
+  commission: {
+    name: "Отборочная комиссия ИРИТ-РТФ",
+    telephone: "+7 (964) 489-88-72",
+    email: "E-mail: rtf.priem@urfu.ru",
+  },
+};

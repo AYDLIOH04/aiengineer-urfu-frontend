@@ -33,7 +33,7 @@ export const ContactForm = () => {
       />
       <Input placeholder="Ваш E-mail" type="email" name="email" required />
       <Textarea placeholder="Ваш вопрос" name="question" required />
-      <Button type="submit" disabled={pending} className="md:w-auto w-full self-center sm:self-start">
+      <Button type="submit" disabled={pending} className="lg:w-auto w-full self-center sm:self-start">
         Отправить
       </Button>
       <p className="text-[14px]">
