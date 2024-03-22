@@ -1,5 +1,7 @@
 export const Footer = () => {
   return (
-    <div>Footer</div>
-  )
-}
+    <footer className="bg-accent min-h-[300px]">
+      <div className="container"></div>
+    </footer>
+  );
+};

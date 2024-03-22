@@ -219,24 +219,28 @@ export const faqData: any = [
 
 export const reviewsData: any = [
   {
+    id: 1,
     author: "Антон",
     role: "Студент",
     message:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque blanditiis, ea veritatis minima officiis voluptas optio ad. Fugit, et in.",
   },
   {
+    id: 2,
     author: "Олеся",
     role: "Выпускница 2023",
     message:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. A doloremque, reiciendis architecto exercitationem facere aperiam, neque repudiandae inventore odit nesciunt iure alias sit qui cumque, debitis eum. Tenetur, perspiciatis consequuntur.",
   },
   {
+    id: 3,
     author: "Иван Васильев",
     role: "Преподаватель",
     message:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, amet! Consequatur, nihil assumenda sed neque excepturi ullam numquam commodi consectetur similique itaque, mollitia nesciunt blanditiis a modi sapiente explicabo sequi soluta. Laborum, repellendus voluptates deserunt eaque soluta, veniam excepturi iste cupiditate quia sint tempora temporibus provident dolore deleniti quos id.",
   },
   {
+    id: 4,
     author: "Софья",
     role: "Студента",
     message:

@@ -11,6 +11,7 @@ export const EmployeesSection = ({ data }: { data: any }) => {
         <SectionTitle>Команда преподавателей</SectionTitle>
         <div className="relative flex h-[550px] w-screen cursor-grab items-center justify-center xl:w-[1200px]">
           <DinamicSwiper
+            loop
             smSlidesPerView={1}
             mdSlidesPerView={2}
             lgSlidesPerView={3}
