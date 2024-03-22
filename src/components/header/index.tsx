@@ -1,25 +1,25 @@
-'use client';
+"use client";
 
-import { useScrollOffset } from '@/hooks';
-import Image from 'next/image';
-import { PageSettings } from './settings';
-import { Menu } from './menu';
-import { Navbar } from './navbar';
-import clsx from 'clsx';
+import { useScrollOffset } from "@/hooks";
+import Image from "next/image";
+import { PageSettings } from "./settings";
+import { Menu } from "./menu";
+import { Navbar } from "./navbar";
+import clsx from "clsx";
 
 export const Header = () => {
   const scrolled = useScrollOffset(80);
 
   return (
     <header
-      className={clsx(
-        'h-[60px] z-[50] fixed top-0 left-0 right-0 bg-header',
-        { 'shadow-md': scrolled }
-      )}
+      className={clsx("fixed left-0 right-0 top-0 z-[50] h-[60px] bg-header", {
+        "shadow-md": scrolled,
+      })}
     >
       <div className="header-container">
-        <nav className="flex justify-between items-center">
+        <nav className="flex items-center justify-between">
           <Image
+            priority
             className="my-[5px]"
             src="/logo-irit-rtf.png"
             alt="IRIT-RTF Logo"
