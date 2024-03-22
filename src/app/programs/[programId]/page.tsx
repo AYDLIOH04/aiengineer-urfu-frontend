@@ -8,6 +8,7 @@ import {
   enterInstituteData,
   questionsData,
   faqData,
+  reviewsData,
 } from "@/mocks/program";
 import {
   AboutSection,
@@ -39,7 +40,7 @@ const ProgramPage = ({ params }: { params: { programId: string } }) => {
       </div>
       <PartnersSection data={partnersData} />
       <EnterInstituteSection data={enterInstituteData} />
-      <ReviewsSection />
+      <ReviewsSection data={reviewsData} />
       <FaqSection data={faqData} />
       <QuestionSection />
       <ScrollButton />

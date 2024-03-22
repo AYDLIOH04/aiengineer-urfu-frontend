@@ -1,6 +1,14 @@
 "use client";
 
-import { Swiper } from "swiper/react";
+type DinamicSwiperProps = SwiperProps & {
+  children: React.ReactNode;
+  smSlidesPerView?: number;
+  mdSlidesPerView?: number;
+  lgSlidesPerView?: number;
+  xlSlidesPerView?: number;
+};
+
+import { Swiper, SwiperProps } from "swiper/react";
 import { PrevButton } from "./prev-button";
 import { NextButton } from "./next-button";
 import "swiper/css";
@@ -8,32 +16,33 @@ import "swiper/css/navigation";
 
 export const DinamicSwiper = ({
   children,
-  countSlides = 4,
-}: {
-  children: React.ReactNode;
-  countSlides?: number;
-}) => {
+  smSlidesPerView,
+  mdSlidesPerView,
+  lgSlidesPerView,
+  xlSlidesPerView,
+  ...props
+}: DinamicSwiperProps) => {
   return (
     <Swiper
-      loop
       slidesPerView={1}
       spaceBetween={50}
       breakpoints={{
         576: {
-          slidesPerView: Math.max(countSlides - 3, 1),
+          slidesPerView: smSlidesPerView,
         },
         768: {
-          slidesPerView: Math.max(countSlides - 2, 1),
+          slidesPerView: mdSlidesPerView,
         },
         1024: {
-          slidesPerView: Math.max(countSlides - 1, 1),
+          slidesPerView: lgSlidesPerView,
         },
         1400: {
-          slidesPerView: countSlides,
+          slidesPerView: xlSlidesPerView,
         },
       }}
       pagination={{ clickable: true }}
       className="dinamic-swiper"
+      {...props}
     >
       <PrevButton className="left-0 text-accent" />
       {children}

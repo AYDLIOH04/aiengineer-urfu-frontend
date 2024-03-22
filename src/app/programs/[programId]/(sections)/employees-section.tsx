@@ -10,7 +10,12 @@ export const EmployeesSection = ({ data }: { data: any }) => {
       <div className="container flex h-full flex-col items-center justify-center">
         <SectionTitle>Команда преподавателей</SectionTitle>
         <div className="relative flex h-[550px] w-screen cursor-grab items-center justify-center xl:w-[1200px]">
-          <DinamicSwiper>
+          <DinamicSwiper
+            smSlidesPerView={1}
+            mdSlidesPerView={2}
+            lgSlidesPerView={3}
+            xlSlidesPerView={4}
+          >
             {data?.map((item: any, itemIndex: number) => (
               <SwiperSlide key={itemIndex}>
                 <EmployeeSlide data={item} />

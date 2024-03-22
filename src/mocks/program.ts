@@ -216,3 +216,30 @@ export const faqData: any = [
     body: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus dolorem quos sapiente soluta excepturi officia nulla, earum velit debitis co",
   },
 ];
+
+export const reviewsData: any = [
+  {
+    author: "Антон",
+    role: "Студент",
+    message:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque blanditiis, ea veritatis minima officiis voluptas optio ad. Fugit, et in.",
+  },
+  {
+    author: "Олеся",
+    role: "Выпускница 2023",
+    message:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A doloremque, reiciendis architecto exercitationem facere aperiam, neque repudiandae inventore odit nesciunt iure alias sit qui cumque, debitis eum. Tenetur, perspiciatis consequuntur.",
+  },
+  {
+    author: "Иван Васильев",
+    role: "Преподаватель",
+    message:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, amet! Consequatur, nihil assumenda sed neque excepturi ullam numquam commodi consectetur similique itaque, mollitia nesciunt blanditiis a modi sapiente explicabo sequi soluta. Laborum, repellendus voluptates deserunt eaque soluta, veniam excepturi iste cupiditate quia sint tempora temporibus provident dolore deleniti quos id.",
+  },
+  {
+    author: "Софья",
+    role: "Студента",
+    message:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error tempora saepe, dolorum quaerat unde delectus a, adipisci, iure incidunt ea perspiciatis modi suscipit. Fugit explicabo dolor atque quas mollitia pariatur libero iusto aspernatur repudiandae.",
+  },
+];
