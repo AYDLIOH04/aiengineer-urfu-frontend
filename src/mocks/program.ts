@@ -258,7 +258,10 @@ export const contactData: any = {
 
 export const footerData: any = {
   institute: "Институт радиоэлектроники и информационных технологий - РТФ",
-  email: "priem-rtf.urfu.ru",
+  website: {
+    label:"priem-rtf.urfu.ru",
+    link:"https://priem-rtf.urfu.ru/ru/",
+  },
   telegramLink: "https://web.telegram.org",
   vkLink: "https://vk.com",
   commission: {
