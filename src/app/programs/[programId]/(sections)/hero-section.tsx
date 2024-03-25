@@ -11,7 +11,7 @@ const pInfoStyles = "laptop:text-[22px] text-[16px]";
 export const HeroSection = ({ data }: { data: any }) => {
   const { title, mags, learn, direction, format, duration, places } = data;
   return (
-    <section className="full-screen relative flex overflow-hidden bg-accent text-secondary">
+    <section className="full-screen bg-backgroundAccent relative flex overflow-hidden text-white">
       <Image
         src="/hero-section.jpg"
         alt="Hero Image"
@@ -63,21 +63,19 @@ export const HeroSection = ({ data }: { data: any }) => {
             <ul className="grid w-full gap-8 md:grid-cols-2 md:gap-4 lg:grid-cols-4">
               <li>
                 <h3 className={hInfoStyles}>{direction.id}</h3>
-                <p className={pInfoStyles}>
-                  направление подготовки «{direction.desc}»
-                </p>
+                <p className={pInfoStyles}>«{direction.desc}»</p>
               </li>
               <li className="md:text-right lg:text-left">
-                <h3 className={hInfoStyles}>{format}</h3>
-                <p className={pInfoStyles}>Форма обучения</p>
+                <h3 className={hInfoStyles}>{format.title}</h3>
+                <p className={pInfoStyles}>{format.desc}</p>
               </li>
               <li>
-                <h3 className={hInfoStyles}>{duration}</h3>
-                <p className={pInfoStyles}>срок обучения</p>
+                <h3 className={hInfoStyles}>{duration.title}</h3>
+                <p className={pInfoStyles}>{duration.desc}</p>
               </li>
               <li className="md:text-right lg:text-left">
-                <h3 className={hInfoStyles}>{places} мест</h3>
-                <p className={pInfoStyles}>На бюджентой основе</p>
+                <h3 className={hInfoStyles}>{places.title}</h3>
+                <p className={pInfoStyles}>{places.desc}</p>
               </li>
             </ul>
           </div>

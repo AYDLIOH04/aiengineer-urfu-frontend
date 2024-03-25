@@ -6,7 +6,7 @@ export const Textarea = ({ className, ...props }: InputProps) => {
   return (
     <textarea
       className={clsx(
-        "min-h-[100px] border-2 border-accent px-4 py-3 outline-orange",
+        "min-h-[100px] border-2 border-accent px-4 py-3 outline-orange bg-transparent",
         className,
       )}
       {...props}

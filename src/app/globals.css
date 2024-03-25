@@ -5,6 +5,7 @@
 @layer base {
   :root {
     --background: 0, 0%, 100%;
+    --background-accent: 203, 89%, 45%;
     --foreground: 0, 0%, 93%;
     --header: 0, 0%, 100%;
     --footer: 203, 89%, 22%;
@@ -21,7 +22,17 @@
   }
 
   .dark {
-    /* TODO */
+    --background: 203 98% 10%;
+    --foreground: 203 98% 10%;
+    --background-accent: 203 94% 16%;
+    --header: 203 98% 10%;
+    --footer: 203 94% 16%;
+    --secondary: 203 21% 88%;
+    --primary: 203 21% 88%;
+    --accent: 203 26% 53%;
+    --orange: 0 0% 78%;
+    --scroll-background: 203 98% 10%;
+    --scroll: 203 94% 16%;
   }
 
   *::-webkit-scrollbar {

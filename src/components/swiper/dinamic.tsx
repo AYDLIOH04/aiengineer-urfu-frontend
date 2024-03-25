@@ -44,9 +44,9 @@ export const DinamicSwiper = ({
       className="dinamic-swiper"
       {...props}
     >
-      <PrevButton className="left-0 text-accent" />
+      <PrevButton className="left-0 text-accent dark:hover:bg-accent dark:hover:text-background" />
       {children}
-      <NextButton className="right-0 text-accent" />
+      <NextButton className="right-0 text-accent dark:hover:bg-accent dark:hover:text-background" />
     </Swiper>
   );
 };

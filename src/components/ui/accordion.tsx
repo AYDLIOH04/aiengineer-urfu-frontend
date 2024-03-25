@@ -26,7 +26,7 @@ export const Accordion = ({
         <h3 className="text-[20px] font-light md:text-[22px] lg:text-[24px]">
           {title}
         </h3>
-        <div className="cursor-pointer rounded-full p-1 duration-300 group-hover:bg-foreground">
+        <div className="dark:group-hover:bg-backgroundAccent cursor-pointer rounded-full p-1 duration-300 group-hover:bg-foreground">
           <PiPlusLight
             size={35}
             className={clsx("transform duration-300", { "-rotate-45": open })}

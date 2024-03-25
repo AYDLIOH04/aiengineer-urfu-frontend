@@ -66,14 +66,14 @@ export const QuestionSection = ({ data }: { data: any }) => {
               <Link
                 href={data.telegramLink}
                 target="_blank"
-                className="flex h-[45px] w-[45px] items-center justify-center rounded-full bg-accent duration-200 hover:opacity-90"
+                className="flex h-[45px] w-[45px] items-center justify-center rounded-full bg-accent duration-200 hover:opacity-80 dark:text-foreground"
               >
                 <FaTelegramPlane className="text-[26px] text-secondary" />
               </Link>
               <Link
                 href={data.vkLink}
                 target="_blank"
-                className="flex h-[45px] w-[45px] items-center justify-center rounded-full bg-accent duration-200 hover:opacity-90"
+                className="flex h-[45px] w-[45px] items-center justify-center rounded-full bg-accent duration-200 hover:opacity-80 dark:text-foreground"
               >
                 <VkIcon className="text-[26px] text-secondary" />
               </Link>

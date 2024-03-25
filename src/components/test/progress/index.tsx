@@ -15,7 +15,7 @@ export const ProgressTest = ({
 
   return (
     <div className="relative flex w-[900px] flex-col items-center">
-      <h3 className="text-center text-[22px] font-[600] text-secondary md:text-[26px] lg:text-[32px]">
+      <h3 className="text-center text-[22px] font-[600] text-white md:text-[26px] lg:text-[32px]">
         Вопрос {currentNum} / {questions.length}
       </h3>
       <QuestionSlider

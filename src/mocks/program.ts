@@ -6,9 +6,18 @@ export const heroData: any = {
     id: "27.04.04",
     desc: "Управление в технических системах",
   },
-  format: "Очная",
-  duration: "2 года",
-  places: "25",
+  format: {
+    title: "Очная",
+    desc: "Форма обучения",
+  },
+  duration: {
+    title: "2 года",
+    desc: "Срок обучения",
+  },
+  places: {
+    title: "25 мест",
+    desc: "На бюджетной основе",
+  },
 };
 
 export const aboutData: any = [
@@ -259,8 +268,8 @@ export const contactData: any = {
 export const footerData: any = {
   institute: "Институт радиоэлектроники и информационных технологий - РТФ",
   website: {
-    label:"priem-rtf.urfu.ru",
-    link:"https://priem-rtf.urfu.ru/ru/",
+    label: "priem-rtf.urfu.ru",
+    link: "https://priem-rtf.urfu.ru/ru/",
   },
   telegramLink: "https://web.telegram.org",
   vkLink: "https://vk.com",

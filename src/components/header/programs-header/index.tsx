@@ -2,10 +2,11 @@
 
 import { useScrollOffset } from "@/hooks";
 import Image from "next/image";
-import { PageSettings } from "./settings";
 import { Menu } from "./menu";
 import { Navbar } from "./navbar";
 import clsx from "clsx";
+import { TranslatorSettings } from "./translator";
+import { ThemeSettings } from "./themes";
 
 export const Header = () => {
   const scrolled = useScrollOffset(80);
@@ -28,7 +29,10 @@ export const Header = () => {
           />
           <Navbar />
           <div className="flex gap-2">
-            <PageSettings />
+            <ul className="relative z-[51] flex items-center justify-center gap-2">
+              {/* <TranslatorSettings /> */}
+              <ThemeSettings />
+            </ul>
             <Menu />
           </div>
         </nav>

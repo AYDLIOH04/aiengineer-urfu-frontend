@@ -1,3 +1,9 @@
-export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
-  return <div>theme-provider</div>; // TODO
-};
+"use client"
+
+import * as React from "react"
+import { ThemeProvider as NextThemesProvider } from "next-themes"
+import { type ThemeProviderProps } from "next-themes/dist/types"
+
+export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
+  return <NextThemesProvider {...props}>{children}</NextThemesProvider>
+}

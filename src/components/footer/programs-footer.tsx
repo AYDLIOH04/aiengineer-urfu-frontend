@@ -24,16 +24,16 @@ export const Footer = ({ data }: { data: any }) => {
             <Link
               href={telegramLink}
               target="_blank"
-              className="flex h-[45px] w-[45px] items-center justify-center rounded-full bg-foreground duration-200 hover:opacity-90"
+              className="flex h-[45px] w-[45px] items-center justify-center rounded-full bg-foreground duration-200 hover:opacity-90 dark:bg-accent dark:text-foreground"
             >
-              <FaTelegramPlane className="text-[26px] text-footer" />
+              <FaTelegramPlane className="text-[26px] text-footer dark:text-white" />
             </Link>
             <Link
               href={vkLink}
               target="_blank"
-              className="flex h-[45px] w-[45px] items-center justify-center rounded-full bg-foreground duration-200 hover:opacity-90"
+              className="flex h-[45px] w-[45px] items-center justify-center rounded-full bg-foreground duration-200 hover:opacity-80 dark:bg-accent dark:text-foreground"
             >
-              <VkIcon className="text-[26px] text-footer" />
+              <VkIcon className="text-[26px] text-footer dark:text-white" />
             </Link>
           </div>
         </div>

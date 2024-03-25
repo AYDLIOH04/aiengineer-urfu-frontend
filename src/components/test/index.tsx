@@ -22,7 +22,7 @@ export const Test = ({ questions }: { questions: any }) => {
   };
 
   return (
-    <div className="text-secondary">
+    <div className="text-white">
       {inProgress ? (
         <ProgressTest
           setAnswers={setUserAnswers}
