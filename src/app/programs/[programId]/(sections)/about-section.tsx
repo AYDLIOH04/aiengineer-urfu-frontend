@@ -12,11 +12,11 @@ import {
 } from "@/components/svg";
 
 const AboutIcons = [
-  ManIcon,
-  StudentIcon,
-  EaselIcon,
   PeopleIcon,
+  EaselIcon,
   GrandIcon,
+  StudentIcon,
+  ManIcon,
   RubleIcon,
 ];
 
