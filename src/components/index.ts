@@ -5,3 +5,4 @@ export * from "./footer/programs-footer";
 export * from "./animation";
 export * from "./swiper";
 export * from "./vertical-line";
+export * from "./providers";

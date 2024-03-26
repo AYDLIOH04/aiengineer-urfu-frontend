@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/providers";
+import { ThemeProvider, Header } from "@/components";
 
 const monserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Инженерия искусственного интеллекта",
+  title: "Системы управления сложными объектами и процессами",
   description: "Магистерская программа ИРИТ-РТФ УрФУ",
   openGraph: {
-    title: "Инженерия искусственного интеллекта",
-    description: "Магистерская программа ИРИТ-РТФ УрФУ",
+    title: "Системы управления сложными объектами и процессами",
+    description: "Научись разрабатывать технические системы",
     type: "website",
     locale: "ru_RU",
     url: "https://aiengineer-urfu.vercel.app",
@@ -34,7 +34,8 @@ const RootLayout = ({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <Header />
+          <main className="mt-[60px] overflow-x-hidden">{children}</main>
         </ThemeProvider>
       </body>
     </html>
