@@ -17,7 +17,7 @@ export const QuestionSlide = ({
 
   return (
     <div className="mx-auto my-8 sm:w-[350px] w-[300px] px-5 md:w-[400px] lg:w-[650px]">
-      <h4 className="mb-8 text-center text-[20px] font-semibold md:text-[24px]">
+      <h4 className="mb-8 text-center text-[14px] sm:text-[18px] font-semibold md:text-[24px]">
         {data.question}
       </h4>
       <ul className="mx-auto">
