@@ -10,6 +10,7 @@ import {
   RubleIcon,
   StudentIcon,
 } from "@/components/svg";
+import { AboutType } from "@/types/about";
 
 const AboutIcons = [
   PeopleIcon,
@@ -20,7 +21,7 @@ const AboutIcons = [
   RubleIcon,
 ];
 
-export const AboutSection = ({ data }: { data: any }) => {
+export const AboutSection = ({ data }: { data: AboutType[] }) => {
   return (
     <section className="mt-20" id="about">
       <div className="container">

@@ -1,10 +1,11 @@
 "use client";
 
 import { DinamicSwiper, SectionTitle } from "@/components";
+import { ReviewType } from "@/types/review";
 import clsx from "clsx";
 import { SwiperSlide } from "swiper/react";
 
-export const ReviewsSection = ({ data }: { data: any }) => {
+export const ReviewsSection = ({ data }: { data: ReviewType[] }) => {
   return (
     <section className="mt-[120px] flex h-[600px] items-center justify-center">
       <div className="container flex flex-col items-center justify-center">

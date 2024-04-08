@@ -1,13 +1,14 @@
 "use client";
 
+import { ProfessionType } from "@/types/profession";
 import { motion } from "framer-motion";
 
-export const ProfessionSection = ({ data }: any) => {
+export const ProfessionSection = ({ data }: { data: ProfessionType }) => {
   const { title, list } = data;
   return (
     <section className="mt-[140px] overflow-hidden md:mt-[240px]">
       <div className="container flex flex-col justify-center gap-10 md:flex-row">
-        <div className="lg:w-1/2 md:w-2/3 w-full">
+        <div className="w-full md:w-2/3 lg:w-1/2">
           <motion.h2
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
@@ -17,7 +18,7 @@ export const ProfessionSection = ({ data }: any) => {
               ease: "easeOut",
               delay: 0.4,
             }}
-            className="mb-[40px] leading-8 text-left text-[22px] font-semibold text-accent md:text-[28px] lg:text-[32px]"
+            className="mb-[40px] text-left text-[22px] font-semibold leading-8 text-accent md:text-[28px] lg:text-[32px]"
           >
             Перспективная профессия
           </motion.h2>
@@ -31,10 +32,10 @@ export const ProfessionSection = ({ data }: any) => {
               delay: 0.7,
             }}
           >
-            <p className="mb-[40px] leading-6 md:leading-8 text-[16px] font-semibold md:mr-32 md:text-left md:text-[18px] lg:text-[20px] laptop:text-[22px]">
+            <p className="mb-[40px] text-[16px] font-semibold leading-6 md:mr-32 md:text-left md:text-[18px] md:leading-8 lg:text-[20px] laptop:text-[22px]">
               {title}
             </p>
-            <p className="mb-[30px] leading-6 md:leading-8 text-[16px] md:mr-20 md:text-[18px] lg:text-[20px] laptop:text-[22px]">
+            <p className="mb-[30px] text-[16px] leading-6 md:mr-20 md:text-[18px] md:leading-8 lg:text-[20px] laptop:text-[22px]">
               После выпуска вы сможете работать на таких позициях, как:
             </p>
             <ul className="list-disc">
@@ -59,7 +60,7 @@ export const ProfessionSection = ({ data }: any) => {
           }}
           src="/lorem.png"
           alt="Profession"
-          className="lg:w-1/2 md:w-1/3 sm:w-1/2 w-full mx-auto overflow-hidden object-contain"
+          className="mx-auto w-full overflow-hidden object-contain sm:w-1/2 md:w-1/3 lg:w-1/2"
         />
       </div>
     </section>

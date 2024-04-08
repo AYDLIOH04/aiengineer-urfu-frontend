@@ -1,8 +1,9 @@
 "use client";
 
+import { EmployeeType } from "@/types/employee";
 import { motion } from "framer-motion";
 
-export const BossSection = ({ data }: { data: any }) => {
+export const BossSection = ({ data }: { data: EmployeeType }) => {
   const { name, desc } = data;
 
   return (

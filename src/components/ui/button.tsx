@@ -14,7 +14,7 @@ export const Button = ({
     <button
       disabled={isPending}
       className={clsx(
-        "cursor-pointer rounded-md bg-orange px-8 py-3 text-[16px] font-semibold text-white duration-200 hover:opacity-80 dark:text-backgroundAccent sm:px-14 sm:py-4 md:text-[22px]",
+        "disabled:opacity-50 cursor-pointer rounded-md bg-orange px-8 py-3 text-[16px] font-semibold text-white duration-200 hover:opacity-80 dark:text-backgroundAccent sm:px-14 sm:py-4 md:text-[22px] flex justify-center items-center",
         className,
       )}
       {...props}

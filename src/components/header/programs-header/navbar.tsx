@@ -9,7 +9,7 @@ export const Navbar = () => {
   return (
     <ul className="xl:flex hidden justify-between items-center gap-10">
       <Link href="/" className={linkStyles}>
-        Все программы
+        Главная страница
       </Link>
       {headerLinks.map((link) => (
         <a

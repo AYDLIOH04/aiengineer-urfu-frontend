@@ -4,11 +4,12 @@ import { Button } from "@/components/ui";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { scrollToId } from "@/utils";
+import { HeroType } from "@/types/hero";
 
 const hInfoStyles = "mb-3 laptop:text-[28px] text-[24px] font-semibold";
 const pInfoStyles = "laptop:text-[22px] text-[16px]";
 
-export const HeroSection = ({ data }: { data: any }) => {
+export const HeroSection = ({ data }: { data: HeroType }) => {
   const { title, mags, learn, direction, format, duration, places } = data;
   return (
     <section className="full-screen bg-backgroundAccent relative flex overflow-hidden text-white">

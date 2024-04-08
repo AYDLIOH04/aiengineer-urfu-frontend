@@ -5,9 +5,10 @@ import Image from "next/image";
 import { Menu } from "./menu";
 import { Navbar } from "./navbar";
 import clsx from "clsx";
-import { TranslatorSettings } from "./translator";
+import { AdminDashboard } from "./admin";
 import { ThemeSettings } from "./themes";
 import { useTheme } from "next-themes";
+import Link from "next/link";
 
 export const Header = () => {
   const { theme } = useTheme();
@@ -23,7 +24,7 @@ export const Header = () => {
         <nav className="flex items-center justify-between">
           <Image
             priority
-            className="my-[5px] dark:flex hidden"
+            className="my-[5px] hidden dark:flex"
             src="/rtf-logo-dark.svg"
             alt="IRIT-RTF Logo"
             width={86}
@@ -31,7 +32,7 @@ export const Header = () => {
           />
           <Image
             priority
-            className="my-[5px] dark:hidden flex"
+            className="my-[5px] flex dark:hidden"
             src="/rtf-logo-light.svg"
             alt="IRIT-RTF Logo"
             width={86}
@@ -40,8 +41,10 @@ export const Header = () => {
           <Navbar />
           <div className="flex gap-2">
             <ul className="relative z-[51] flex items-center justify-center gap-2">
-              {/* <TranslatorSettings /> */}
               <ThemeSettings />
+              <Link href={"/dashboard"}>
+                <AdminDashboard />
+              </Link>
             </ul>
             <Menu />
           </div>

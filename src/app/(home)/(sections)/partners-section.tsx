@@ -1,10 +1,11 @@
 "use client";
 
 import { SectionTitle } from "@/components";
+import { PartnerType } from "@/types/partner";
 import Image from "next/image";
 import Link from "next/link";
 
-export const PartnersSection = ({ data }: { data: any }) => {
+export const PartnersSection = ({ data }: { data: PartnerType[] }) => {
   return (
     <section className="mt-20">
       <div className="container">

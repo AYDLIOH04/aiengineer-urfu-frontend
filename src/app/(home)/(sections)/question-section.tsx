@@ -3,11 +3,12 @@
 import { SectionTitle } from "@/components";
 import { ContactForm } from "@/components/form/contact-form";
 import { VkIcon } from "@/components/svg";
+import { ContactsType } from "@/types/contacts";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { FaTelegramPlane } from "react-icons/fa";
 
-export const QuestionSection = ({ data }: { data: any }) => {
+export const QuestionSection = ({ data }: { data: ContactsType }) => {
   return (
     <section id="question" className="my-[170px]">
       <div className="container">

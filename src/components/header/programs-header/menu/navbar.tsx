@@ -40,8 +40,12 @@ export const MenuNavbar = ({
         >
           <div className="flex h-[100vh] flex-col items-center justify-between gap-10 py-20">
             <div className="mx-4 text-center">
-              <Link href="/" className="cursor-pointer text-[20px] font-[400]">
-                Все программы
+              <Link
+                onClick={onClose}
+                href="/"
+                className="cursor-pointer text-[20px] font-[400]"
+              >
+                Главная страница
               </Link>
               <div className="my-4 h-0.5 w-full bg-secondary" />
               <ul className="flex flex-col gap-5">

@@ -1,10 +1,11 @@
 "use client";
 
 import { SectionTitle, DinamicSwiper } from "@/components";
+import { EmployeeType } from "@/types/employee";
 import Image from "next/image";
 import { SwiperSlide } from "swiper/react";
 
-export const EmployeesSection = ({ data }: { data: any }) => {
+export const EmployeesSection = ({ data }: { data: EmployeeType[] }) => {
   return (
     <section className="h-[800px]">
       <div className="container flex h-full flex-col items-center justify-center">

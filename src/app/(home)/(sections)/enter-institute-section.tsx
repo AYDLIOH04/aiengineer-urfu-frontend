@@ -1,6 +1,7 @@
 import { SectionTitle, VerticalLine } from "@/components";
+import { EnterInstituteType } from "@/types/enter";
 
-export const EnterInstituteSection = ({ data }: { data: any }) => {
+export const EnterInstituteSection = ({ data }: { data: EnterInstituteType[] }) => {
   return (
     <section id="enter-institute" className="mt-48">
       <div className="container">
