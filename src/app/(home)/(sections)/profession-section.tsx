@@ -4,7 +4,7 @@ import { ProfessionType } from "@/types/profession";
 import { motion } from "framer-motion";
 
 export const ProfessionSection = ({ data }: { data: ProfessionType }) => {
-  const { title, list } = data;
+  const { title, listTitle, list } = data;
   return (
     <section className="mt-[140px] overflow-hidden md:mt-[240px]">
       <div className="container flex flex-col justify-center gap-10 md:flex-row">
@@ -36,7 +36,7 @@ export const ProfessionSection = ({ data }: { data: ProfessionType }) => {
               {title}
             </p>
             <p className="mb-[30px] text-[16px] leading-6 md:mr-20 md:text-[18px] md:leading-8 lg:text-[20px] laptop:text-[22px]">
-              После выпуска вы сможете работать на таких позициях, как:
+              {listTitle}
             </p>
             <ul className="list-disc">
               {list.map((item: any, index: number) => (

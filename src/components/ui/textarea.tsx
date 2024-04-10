@@ -1,15 +1,21 @@
 import clsx from "clsx";
+import { forwardRef } from "react";
 
-type InputProps = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {};
+type TextareaProps = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {};
 
-export const Textarea = ({ className, ...props }: InputProps) => {
-  return (
-    <textarea
-      className={clsx(
-        "min-h-[100px] border-2 border-accent px-4 py-3 outline-orange bg-transparent",
-        className,
-      )}
-      {...props}
-    />
-  );
-};
+export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
+  ({ className, ...props }, ref) => {
+    return (
+      <textarea
+        ref={ref}
+        className={clsx(
+          "min-h-[100px] border-2 border-accent bg-transparent px-4 py-3 outline-orange",
+          className,
+        )}
+        {...props}
+      />
+    );
+  },
+);
+
+Textarea.displayName = "Textarea";

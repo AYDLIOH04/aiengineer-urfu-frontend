@@ -1,5 +1,3 @@
-"use client";
-
 import { Button, Input } from "@/components/ui";
 import { useUpdateData } from "@/services";
 import { HeroType } from "@/types/hero";
@@ -34,20 +32,21 @@ export const HeroForm = ({ data }: { data: HeroType }) => {
       desc: data.places.desc,
     };
 
-    reset();
     const newData = {
       ...data,
       ...clearObject(updateData),
       direction,
       places,
     };
+    
+    reset();
     mutate({ hero: newData });
   };
 
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="mx-auto my-20 flex w-full flex-col gap-5"
+      className="mx-auto my-10 flex w-full flex-col gap-5 sm:text-[16px] text-[14px]"
     >
       <p className="font-semibold">Информация</p>
       <Input
@@ -89,7 +88,7 @@ export const HeroForm = ({ data }: { data: HeroType }) => {
       />
       <div className="flex justify-center gap-2">
         <Button
-          className="w-1/2 bg-green-400 dark:text-white"
+          className="w-1/2 bg-green-500 dark:text-white"
           type="submit"
           isPending={isPending}
           disabled={!isDirty || !isValid}
@@ -99,7 +98,6 @@ export const HeroForm = ({ data }: { data: HeroType }) => {
         <Button
           className="w-1/2 bg-rose-500 dark:text-white"
           type="button"
-          isPending={isPending}
           disabled={!cancelData.length}
           onClick={onCancel}
         >
