@@ -18,7 +18,7 @@ export const ReviewsSection = ({ data }: { data: ReviewType[] }) => {
             lgSlidesPerView={2}
             xlSlidesPerView={2}
           >
-            {data.map((item: any) => (
+            {data.map((item: ReviewType) => (
               <SwiperSlide key={item.id}>
                 <ReviewsSlide review={item} />
               </SwiperSlide>

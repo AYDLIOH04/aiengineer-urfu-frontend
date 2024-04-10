@@ -11,9 +11,9 @@ export const FaqSection = ({ data }: { data: FaqType[] }) => {
       <div className="container">
         <SectionTitle>Часто задаваемые вопросы</SectionTitle>
         <div className="relative mx-auto mt-20 max-w-[840px] before:absolute before:left-0 before:right-0 before:top-0 before:h-0.5 before:w-full before:rounded-md before:bg-accent">
-          {data.map((item: any, itemIndex: number) => (
+          {data.map((item: FaqType, itemIndex: number) => (
             <motion.div
-              key={itemIndex}
+              key={item.id}
               initial={{ y: 100, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{

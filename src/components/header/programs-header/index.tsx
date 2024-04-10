@@ -22,22 +22,24 @@ export const Header = () => {
     >
       <div className="header-container">
         <nav className="flex items-center justify-between">
-          <Image
-            priority
-            className="my-[5px] hidden dark:flex"
-            src="/rtf-logo-dark.svg"
-            alt="IRIT-RTF Logo"
-            width={86}
-            height={50}
-          />
-          <Image
-            priority
-            className="my-[5px] flex dark:hidden"
-            src="/rtf-logo-light.svg"
-            alt="IRIT-RTF Logo"
-            width={86}
-            height={50}
-          />
+          <Link href="/">
+            <Image
+              priority
+              className="my-[5px] hidden dark:flex"
+              src="/rtf-logo-dark.svg"
+              alt="IRIT-RTF Logo"
+              width={86}
+              height={50}
+            />
+            <Image
+              priority
+              className="my-[5px] flex dark:hidden"
+              src="/rtf-logo-light.svg"
+              alt="IRIT-RTF Logo"
+              width={86}
+              height={50}
+            />
+          </Link>
           <Navbar />
           <div className="flex gap-2">
             <ul className="relative z-[51] flex items-center justify-center gap-2">

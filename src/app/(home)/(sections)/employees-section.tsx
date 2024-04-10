@@ -18,8 +18,8 @@ export const EmployeesSection = ({ data }: { data: EmployeeType[] }) => {
             lgSlidesPerView={3}
             xlSlidesPerView={4}
           >
-            {data?.map((item: any, itemIndex: number) => (
-              <SwiperSlide key={itemIndex}>
+            {data?.map((item: EmployeeType) => (
+              <SwiperSlide key={item.id}>
                 <EmployeeSlide data={item} />
               </SwiperSlide>
             ))}

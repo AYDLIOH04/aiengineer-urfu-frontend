@@ -27,7 +27,7 @@ export const AboutSection = ({ data }: { data: AboutType[] }) => {
       <div className="container">
         <SectionTitle>О программе</SectionTitle>
         <ul className="mt-20 grid grid-cols-1 gap-14 md:grid-cols-2 md:gap-20 xl:grid-cols-3">
-          {data.map((item: any, index: number) => {
+          {data.map((item: AboutType, index: number) => {
             const AboutIcon = AboutIcons[index];
 
             return (
@@ -40,7 +40,7 @@ export const AboutSection = ({ data }: { data: AboutType[] }) => {
                   delay: 0.15 * index,
                 }}
                 viewport={{ once: true }}
-                key={index}
+                key={item.id}
                 className="flex flex-col gap-5"
               >
                 <AboutIcon className="text-[50px]" />

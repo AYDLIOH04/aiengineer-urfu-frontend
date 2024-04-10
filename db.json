@@ -22,18 +22,22 @@
   },
   "about": [
     {
+      "id": 1,
       "title": "Предметная область",
       "body": "Студенты будут самостоятельно проектировать, исследовать и разрабатывать технические системы, научатся управлять ими и смогут создавать средства управления данными системами."
     },
     {
+      "id": 2,
       "title": "Практики",
       "body": "Особое внимание отводится практическим занятиям, которые проводятся специалистами в области промышленной автоматизации, автоматизации зданий, энергетики и ракетно-космической техники. В состав практик включены учебная, педагогическая, технологическая и преддипломная."
     },
     {
+      "id": 3,
       "title": "Наша особенность",
       "body": "Уникальность программы в том, что студенты получают профессиональные навыки без отрыва от производства, при помощи занятий, которые проходят в оборудованных учебных классах и специализированных лабораториях прямо на территории предприятия."
     },
     {
+      "id": 4,
       "title": "Научно-исследовательская работа",
       "body": "Студентами осваиваются принципы организации и проведения теоретических и экспериментальных работ, приобретаются навыки по созданию изделий новой техники, приобретается опыт управления результатами научной деятельности и коммерциализация прав на объекты интеллектуальной собственности."
     }
@@ -50,86 +54,57 @@
     {
       "id": 1,
       "question": "Интересует ли вас, как создаются и управляются базы данных?",
-      "answers": [
-        "Да",
-        "Нет"
-      ]
+      "answers": ["Да", "Нет"]
     },
     {
       "id": 2,
       "question": "Вас интересует ли использование искусственного интеллекта в управлении сложными объектами и процессами?",
-      "answers": [
-        "Да",
-        "Нет"
-      ]
+      "answers": ["Да", "Нет"]
     },
     {
       "id": 3,
       "question": "Вы заинтересованы в изучении применения информационных технологий в различных отраслях?",
-      "answers": [
-        "Да",
-        "Нет"
-      ]
+      "answers": ["Да", "Нет"]
     },
     {
       "id": 4,
       "question": "Вас интересует ли изучение работы с компьютерным оборудованием и программным обеспечением?",
-      "answers": [
-        "Да",
-        "Нет"
-      ]
+      "answers": ["Да", "Нет"]
     },
     {
       "id": 5,
       "question": "Вы заинтересованы в изучении принципов работы и конфигурации компьютерных систем?",
-      "answers": [
-        "Да",
-        "Нет"
-      ]
+      "answers": ["Да", "Нет"]
     },
     {
       "id": 6,
       "question": "Вас интересует ли изучение применения компьютерных систем в банковской сфере?",
-      "answers": [
-        "Да",
-        "Нет"
-      ]
+      "answers": ["Да", "Нет"]
     },
     {
       "id": 7,
       "question": "Вы заинтересованы в изучении принципов работы и применения медицинских экспертных систем?",
-      "answers": [
-        "Да",
-        "Нет"
-      ]
+      "answers": ["Да", "Нет"]
     },
     {
       "id": 8,
       "question": "Вас интересует ли изучение принципов работы и применения систем виртуальной реальности?",
-      "answers": [
-        "Да",
-        "Нет"
-      ]
+      "answers": ["Да", "Нет"]
     },
     {
       "id": 9,
       "question": "Вы заинтересованы в изучении принципов работы и применения систем искусственного интеллекта в различных отраслях?",
-      "answers": [
-        "Да",
-        "Нет"
-      ]
+      "answers": ["Да", "Нет"]
     },
     {
       "id": 10,
       "question": "Вас интересует ли изучение принципов работы и применения систем управления проектами в производстве?",
-      "answers": [
-        "Да",
-        "Нет"
-      ]
+      "answers": ["Да", "Нет"]
     }
   ],
   "educationPlan": [
     {
+      "id": 1,
       "title": "Первый семестр",
       "list": [
         "Операционная система Linux",
@@ -144,6 +119,7 @@
       ]
     },
     {
+      "id": 2,
       "title": "Второй семестр",
       "list": [
         "Математические основы искусственного интеллекта",
@@ -160,6 +136,7 @@
       ]
     },
     {
+      "id": 3,
       "title": "Третий семестр",
       "list": [
         "Математические основы искусственного интеллекта",
@@ -174,6 +151,7 @@
       ]
     },
     {
+      "id": 4,
       "title": "Четвертый семестр",
       "list": [
         "Производственная практика, научно-исследовательская работа",
@@ -184,80 +162,98 @@
   ],
   "employees": [
     {
+      "id": 1,
       "name": "Харисов Азамат Робертович",
       "desc": "Кандидат технических наук, Доцент"
     },
     {
+      "id": 2,
       "name": "Юрий Чернышов",
       "desc": "Кандидат физико-математических наук, доцент, руководитель лаборатории по кибербезопасности УЦСБ и ИРИТ-РтФ"
     },
     {
+      "id": 3,
       "name": "Андрей Созыкин",
       "desc": "Кандидат технических наук, доцент, директор школы магистратуры ИРИТ-РТФ УрФУ"
     },
     {
+      "id": 4,
       "name": "Илья Обабков",
       "desc": "Кандидат технических наук, доцент, директор института радиоэлектроники и информационных технологий-РТФ УрФУ"
     },
     {
+      "id": 5,
       "name": "Василий Борисов",
       "desc": "Кандидат технических наук, доцент"
     },
     {
+      "id": 6,
       "name": "Святослав Солодушкин",
       "desc": "Кандидат физико-математических наук, доцент"
     }
   ],
   "partners": [
     {
+      "id": 1,
       "image": "https://thumb.tildacdn.com/tild3330-3861-4538-b662-396166613866/-/resize/312x/-/format/webp/photo_2022-01-19_15-.jpg",
       "link": "https://kontur.ru/"
     },
     {
+      "id": 2,
       "image": "https://thumb.tildacdn.com/tild3634-3962-4334-b535-333032663938/-/resize/312x/-/format/webp/photo_2022-01-19_15-.jpg",
       "link": "https://www.ussc.ru/"
     },
     {
+      "id": 3,
       "image": "https://thumb.tildacdn.com/tild6466-6536-4836-a466-346662346336/-/resize/312x/-/format/webp/Logo_NAUMEN.png",
       "link": "https://www.naumen.ru/"
     },
     {
+      "id": 4,
       "image": "https://thumb.tildacdn.com/tild6163-3537-4339-b764-386636313534/-/resize/312x/-/format/webp/__2022-06-14__163849.png",
       "link": "https://drivecast.live/"
     }
   ],
   "enterInstitute": [
     {
+      "id": 1,
       "title": "Иметь диплом о высшем образовании",
       "body": "Предпочтительно в области ИТ, математики, физики, экономики или по инженерным направлениям подготовки"
     },
     {
+      "id": 2,
       "title": "Зарегистрироваться в личном кабинете абитуриента УрФУ",
       "body": "Первый шаг к поступлению — регистрация в личном кабинете УрФУ"
     },
     {
+      "id": 3,
       "title": "Подать документы",
       "body": "Перечень документов для поступления в 2023 году Календарь поступления"
     },
     {
+      "id": 4,
       "title": "Пройти вступительные испытания",
       "body": "Программа испытаний Пример заданий"
     }
   ],
   "faq": [
     {
+      "id": 1,
       "title": "Куда подавать документы?",
       "body": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil sit voluptatem aspernatur porro vero temporibus consequatur reiciendis, vel minus nisi sed alias ducimus culpa esse ratione dolorem. Reprehenderit, non odio!"
     },
     {
+      "id": 2,
       "title": "Есть ли военная кафедра?",
       "body": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus dolorem quos sapiente soluta excepturi officia nulla, earum velit debitis consectetur facilis voluptate provident autem saepe est accusamus id aperiam error nisi tenetur minus praesentium ratione fuga reprehenderit! Fugit voluptas nihil cum optio asperiores, consectetur veniam ipsum sed enim, ullam quae modi suscipit ducimus et autem recusandae at aut commodi? Itaque esse pariatur voluptate explicabo doloremque harum, excepturi qui deleniti nostrum?"
     },
     {
+      "id": 3,
       "title": "Что тяжелее, килограмм железа или ваты?",
       "body": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus dolorem quos sapiente soluta excepturi officia nulla, earum velit debitis consectetur facilis voluptate provident autem saepe est accusamus id aperiam error nisi tenetur minus praesentium ratione fuga reprehenderit! Fugit voluptas nihil cum optio asperiores, consectetur veniam ipsum sed enim, ullam q"
     },
     {
+      "id": 4,
       "title": "Когда в этом году пасха?",
       "body": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus dolorem quos sapiente soluta excepturi officia nulla, earum velit debitis co"
     }
