@@ -1,4 +1,5 @@
 import { Button, Input, Textarea } from "@/components/ui";
+import { useCancelStack, useFormActive } from "@/hooks";
 import { useUpdateData } from "@/services";
 import { AboutType } from "@/types/about";
 import { clearObject } from "@/utils";
@@ -7,20 +8,16 @@ import { useForm } from "react-hook-form";
 import { MdEdit } from "react-icons/md";
 
 export const AboutForm = ({ data }: { data: AboutType[] }) => {
+  const { size, pop, push } = useCancelStack<AboutType[]>();
+  const { onChange, setFormActive, isFormActive } = useFormActive();
   const { mutate, isPending } = useUpdateData();
   const [selectedIndex, setSelectedIndex] = useState(-1);
-  const [cancelData, setCancelData] = useState<AboutType[][]>([]);
 
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { isDirty, isValid },
-  } = useForm();
+  const { register, handleSubmit, reset } = useForm();
 
   const onCancel = () => {
-    mutate({ about: cancelData[cancelData.length - 1] });
-    setCancelData((current) => current.slice(0, current.length - 1));
+    mutate({ about: pop() });
+    setFormActive(false);
   };
 
   const onSelect = (index: number) => {
@@ -37,9 +34,10 @@ export const AboutForm = ({ data }: { data: AboutType[] }) => {
       ...clearObject(list[index]),
     }));
 
-    setCancelData((current) => [...current, data]);
+    push(data);
     reset();
     mutate({ about: newData });
+    setFormActive(false);
   };
 
   return (
@@ -54,6 +52,7 @@ export const AboutForm = ({ data }: { data: AboutType[] }) => {
               placeholder={data.title}
               {...register(`list.${index}.title`)}
               className="w-full"
+              onChange={onChange}
             />
             <Button
               onClick={() => onSelect(index)}
@@ -68,6 +67,7 @@ export const AboutForm = ({ data }: { data: AboutType[] }) => {
               className="min-h-[200px] w-full"
               placeholder={data.body}
               {...register(`list.${index}.body`)}
+              onChange={onChange}
             />
           )}
         </div>
@@ -77,14 +77,14 @@ export const AboutForm = ({ data }: { data: AboutType[] }) => {
           className="w-1/2 bg-green-500 dark:text-white"
           type="submit"
           isPending={isPending}
-          disabled={!isDirty || !isValid}
+          disabled={!isFormActive}
         >
           Сохранить
         </Button>
         <Button
           className="w-1/2 bg-rose-500 dark:text-white"
           type="button"
-          disabled={!cancelData.length}
+          disabled={!size}
           onClick={onCancel}
         >
           Отмена

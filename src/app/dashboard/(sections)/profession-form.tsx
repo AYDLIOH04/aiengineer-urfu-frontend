@@ -1,4 +1,5 @@
 import { Button, Input, Textarea } from "@/components/ui";
+import { useCancelStack, useFormActive } from "@/hooks";
 import { useUpdateData } from "@/services";
 import { ProfessionType } from "@/types/profession";
 import { clearObject } from "@/utils";
@@ -8,24 +9,17 @@ import { FaPlus } from "react-icons/fa";
 import { IoIosClose } from "react-icons/io";
 
 export const ProfessionForm = ({ data }: { data: ProfessionType }) => {
+  const { size, pop, push } = useCancelStack<ProfessionType>();
+  const { onChange, setFormActive, isFormActive } = useFormActive();
   const [deletedList, setDeletedList] = useState<number[]>([]);
   const [showNew, setShowNew] = useState(false);
-  const [formActive, setFormActive] = useState(false);
   const { mutate, mutateAsync, isPending } = useUpdateData();
-  const [cancelData, setCancelData] = useState<ProfessionType[]>([]);
   const { register, handleSubmit, reset } = useForm();
 
   const onCancel = () => {
-    mutate({ profession: cancelData[cancelData.length - 1] });
+    mutate({ profession: pop() });
     setDeletedList([]);
     setFormActive(false);
-    setCancelData((current) => current.slice(0, current.length - 1));
-  };
-
-  const onChange = () => {
-    if (!formActive) {
-      setFormActive(true);
-    }
   };
 
   const onDelete = (index: number) => {
@@ -34,7 +28,7 @@ export const ProfessionForm = ({ data }: { data: ProfessionType }) => {
   };
 
   const onSubmit = async ({ title, listTitle, list }: any) => {
-    setCancelData((current) => [...current, data]);
+    push(data);
 
     const newList = list
       ?.map((item: string, index: number) =>
@@ -125,14 +119,14 @@ export const ProfessionForm = ({ data }: { data: ProfessionType }) => {
           className="w-1/2 bg-green-500 dark:text-white"
           type="submit"
           isPending={isPending}
-          disabled={!formActive}
+          disabled={!isFormActive}
         >
           Сохранить
         </Button>
         <Button
           className="w-1/2 bg-rose-500 dark:text-white"
           type="button"
-          disabled={!cancelData.length}
+          disabled={!size}
           onClick={onCancel}
         >
           Отмена
