@@ -1,7 +1,7 @@
 "use client";
 
 import { Accordion, Loader } from "@/components/ui";
-import { HeroForm, AboutForm, ProfessionForm } from "./(sections)";
+import { HeroForm, AboutForm, ProfessionForm } from "@/components/form";
 import { useData } from "@/services";
 
 const Dashboard = () => {
@@ -18,7 +18,7 @@ const Dashboard = () => {
   return (
     <section>
       <div className="container mb-40">
-        <div className="max-w-[500px] mx-auto">
+        <div className="mx-auto max-w-[500px]">
           <Accordion title="Главная секция" size="lg">
             <HeroForm data={data.hero} />
           </Accordion>
