@@ -86,6 +86,7 @@ export const ContactForm = () => {
         type="submit"
         isPending={isPending}
         className="w-full self-center sm:self-start lg:w-auto"
+        withPending
       >
         Отправить
       </Button>

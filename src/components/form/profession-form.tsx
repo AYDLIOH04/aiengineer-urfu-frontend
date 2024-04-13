@@ -1,3 +1,5 @@
+"use client";
+
 import { Button, Input, Textarea } from "@/components/ui";
 import { useCancelStack, useFormActive } from "@/hooks";
 import { useUpdateData } from "@/services";

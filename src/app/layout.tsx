@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider, Header, TanstackProvider } from "@/components";
+import { ThemeProvider, Header, TanstackProvider, ReduxProvider } from "@/components";
 
 const monserrat = Montserrat({ subsets: ["latin"] });
 
@@ -35,8 +35,10 @@ const RootLayout = ({
             enableSystem
             disableTransitionOnChange
           >
-            <Header />
-            <main className="mt-[60px] overflow-x-hidden">{children}</main>
+            <ReduxProvider>
+              <Header />
+              <main className="mt-[60px] overflow-x-hidden">{children}</main>
+            </ReduxProvider>
           </ThemeProvider>
         </body>
       </html>
