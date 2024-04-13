@@ -77,11 +77,16 @@ export const LoginForm = () => {
           type={showPassword ? "text" : "password"}
           name="password"
           className="w-full"
+          autoComplete="on"
         />
         <span className="absolute -bottom-7 left-0 text-[14px] text-rose-400">
           {errors.password?.message?.toString()}
         </span>
-        <button type="button" className="absolute right-2 top-1.5 hover:bg-foreground p-1 rounded-md" onClick={onPasswordShow}>
+        <button
+          type="button"
+          className="absolute right-2 top-1.5 rounded-md p-1 hover:bg-foreground"
+          onClick={onPasswordShow}
+        >
           <PasswordIcon size={30} />
         </button>
       </div>
