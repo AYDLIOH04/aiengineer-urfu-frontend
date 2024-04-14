@@ -15,6 +15,7 @@ import {
   BossSection,
 } from "./(sections)";
 import { Footer, ScrollButton } from "@/components";
+
 import { Loader } from "@/components/ui";
 import { useData } from "@/services";
 
@@ -30,7 +31,7 @@ const ProgramPage = () => {
   if (error) return <h3>Error: {error.message}</h3>;
 
   return (
-    <>
+    <main>
       <HeroSection data={data.hero} />
       <AboutSection data={data.about} />
       <ProfessionSection data={data.profession} />
@@ -47,7 +48,7 @@ const ProgramPage = () => {
       <QuestionSection data={data.contacts} />
       <Footer data={data.footer} />
       <ScrollButton />
-    </>
+    </main>
   );
 };
 

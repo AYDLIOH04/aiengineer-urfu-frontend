@@ -13,7 +13,7 @@ export const FaqSection = ({ data }: { data: FaqType[] }) => {
         <div className="relative mx-auto mt-20 max-w-[840px] before:absolute before:left-0 before:right-0 before:top-0 before:h-0.5 before:w-full before:rounded-md before:bg-accent">
           {data.map((item: FaqType, itemIndex: number) => (
             <motion.div
-              key={item.id}
+              key={itemIndex}
               initial={{ y: 100, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{

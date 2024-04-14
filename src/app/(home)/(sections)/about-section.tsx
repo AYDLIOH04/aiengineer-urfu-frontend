@@ -40,7 +40,7 @@ export const AboutSection = ({ data }: { data: AboutType[] }) => {
                   delay: 0.15 * index,
                 }}
                 viewport={{ once: true }}
-                key={item.id}
+                key={index}
                 className="flex flex-col gap-5"
               >
                 <AboutIcon className="text-[50px]" />

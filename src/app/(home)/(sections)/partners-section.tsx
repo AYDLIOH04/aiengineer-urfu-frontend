@@ -11,10 +11,10 @@ export const PartnersSection = ({ data }: { data: PartnerType[] }) => {
       <div className="container">
         <SectionTitle>Партнёры программы</SectionTitle>
         <div className="grid grid-cols-2 justify-center gap-0.5 bg-foreground lg:grid-cols-4 dark:bg-backgroundAccent">
-          {data.map((item: PartnerType) => (
+          {data.map((item: PartnerType, index: number) => (
             <Link
               className="flex w-full items-center justify-center bg-background p-4"
-              key={item.id}
+              key={index}
               href={item.link}
               target="_blank"
             >

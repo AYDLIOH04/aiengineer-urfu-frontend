@@ -5,7 +5,11 @@ import { Accordion } from "@/components/ui";
 import { EducationPlanType } from "@/types/education";
 import { motion } from "framer-motion";
 
-export const EducationPlanSection = ({ data }: { data: EducationPlanType[] }) => {
+export const EducationPlanSection = ({
+  data,
+}: {
+  data: EducationPlanType[];
+}) => {
   return (
     <section id="plan" className="mt-20">
       <div className="container">
@@ -13,7 +17,7 @@ export const EducationPlanSection = ({ data }: { data: EducationPlanType[] }) =>
         <div className="relative mx-auto mt-20 max-w-[840px] before:absolute before:left-0 before:right-0 before:top-0 before:h-0.5 before:w-full before:rounded-md before:bg-accent">
           {data.map((item: EducationPlanType, itemIndex: number) => (
             <motion.div
-              key={item.id}
+              key={itemIndex}
               initial={{ y: 100, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{
