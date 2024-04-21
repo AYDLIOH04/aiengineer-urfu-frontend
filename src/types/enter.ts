@@ -1,5 +1,5 @@
 export type EnterInstituteType = {
-  id: number;
+  id: string | number;
   title: string;
   body: string;
 }

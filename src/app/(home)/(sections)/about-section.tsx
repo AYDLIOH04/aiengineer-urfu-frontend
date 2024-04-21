@@ -28,7 +28,7 @@ export const AboutSection = ({ data }: { data: AboutType[] }) => {
         <SectionTitle>О программе</SectionTitle>
         <ul className="mt-20 grid grid-cols-1 gap-14 md:grid-cols-2 md:gap-20 xl:grid-cols-3">
           {data.map((item: AboutType, index: number) => {
-            const AboutIcon = AboutIcons[index];
+            const AboutIcon = AboutIcons[index % 6];
 
             return (
               <motion.div

@@ -1,30 +1,33 @@
 "use client";
 
+import { v4 } from "uuid";
 import { Button, Input, Textarea } from "@/components/ui";
 import { useCancelStack, useFormActive } from "@/hooks";
 import { useUpdateData } from "@/services";
-import { AboutType } from "@/types/about";
-import { clearObject } from "@/utils";
-import clsx from "clsx";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { FaPlus } from "react-icons/fa";
-import { IoIosClose } from "react-icons/io";
 import { MdEdit } from "react-icons/md";
-import { v4 } from "uuid";
+import { IoIosClose } from "react-icons/io";
+import { EnterInstituteType } from "@/types/enter";
+import { FaPlus } from "react-icons/fa";
+import { clearObject } from "@/utils";
+import clsx from "clsx";
 
-export const AboutForm = ({ data }: { data: AboutType[] }) => {
-  const { size, pop, push } = useCancelStack<AboutType[]>();
+export const EnterInstituteForm = ({
+  data,
+}: {
+  data: EnterInstituteType[];
+}) => {
+  const { size, pop, push } = useCancelStack<EnterInstituteType[]>();
   const { onChange, setFormActive, isFormActive } = useFormActive();
-  const { mutateAsync, mutate, isPending } = useUpdateData();
-  const [showNew, setShowNew] = useState(false);
   const [deletedList, setDeletedList] = useState<number[]>([]);
+  const [showNew, setShowNew] = useState(false);
+  const { mutate, mutateAsync, isPending } = useUpdateData();
   const [selectedIndex, setSelectedIndex] = useState(-1);
-
   const { register, handleSubmit, reset } = useForm();
 
   const onCancel = () => {
-    mutate({ about: pop() });
+    mutate({ enterInstitute: pop() });
     setDeletedList([]);
     setFormActive(false);
   };
@@ -46,7 +49,7 @@ export const AboutForm = ({ data }: { data: AboutType[] }) => {
     push(data);
 
     const newData = list
-      ?.map((item: AboutType, index: number) =>
+      ?.map((item: EnterInstituteType, index: number) =>
         deletedList.includes(index)
           ? null
           : {
@@ -55,9 +58,9 @@ export const AboutForm = ({ data }: { data: AboutType[] }) => {
             },
       )
       .filter(Boolean)
-      .filter((item: AboutType) => item.title || item.body);
+      .filter((item: EnterInstituteType) => item.title || item.body);
 
-    await mutateAsync({ about: newData });
+    await mutateAsync({ enterInstitute: newData });
     reset();
     setDeletedList([]);
     setShowNew(false);
@@ -69,11 +72,11 @@ export const AboutForm = ({ data }: { data: AboutType[] }) => {
       onSubmit={handleSubmit(onSubmit)}
       className="mx-auto my-10 flex w-full flex-col gap-5 text-[14px] sm:text-[16px]"
     >
-      {data.map((item, index) => {
+      {data.map((data, index) => {
         if (deletedList.includes(index)) return null;
 
         return (
-          <div key={item.id} className="flex flex-col gap-2">
+          <div key={index} className="flex flex-col gap-2">
             <div className="flex flex-row">
               <Button
                 onClick={() => onDelete(index)}
@@ -85,7 +88,7 @@ export const AboutForm = ({ data }: { data: AboutType[] }) => {
                 <IoIosClose size={40} />
               </Button>
               <Input
-                placeholder={item.title}
+                placeholder={data.title}
                 {...register(`list.${index}.title`)}
                 className="w-full"
                 onChange={onChange}
@@ -103,7 +106,7 @@ export const AboutForm = ({ data }: { data: AboutType[] }) => {
             {index === selectedIndex && (
               <Textarea
                 className="min-h-[200px] w-full"
-                placeholder={item.body}
+                placeholder={data.body}
                 {...register(`list.${index}.body`)}
                 onChange={onChange}
               />
@@ -113,10 +116,10 @@ export const AboutForm = ({ data }: { data: AboutType[] }) => {
       })}
       {showNew ? (
         <div className="flex flex-col gap-1">
-          <Input
+          <Textarea
             placeholder="Введите заголовок..."
             {...register(`list.${data.length}.title`)}
-            className="w-full"
+            className="min-h-[150px] w-full"
             onChange={onChange}
           />
           <Textarea

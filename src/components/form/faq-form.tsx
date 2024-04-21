@@ -1,37 +1,31 @@
 "use client";
 
-import { Button, Input, Textarea } from "@/components/ui";
+import { Button, Input, Textarea } from "../ui";
 import { useCancelStack, useFormActive } from "@/hooks";
 import { useUpdateData } from "@/services";
-import { AboutType } from "@/types/about";
-import { clearObject } from "@/utils";
-import clsx from "clsx";
 import { useState } from "react";
-import { useForm } from "react-hook-form";
-import { FaPlus } from "react-icons/fa";
-import { IoIosClose } from "react-icons/io";
 import { MdEdit } from "react-icons/md";
+import clsx from "clsx";
+import { FaPlus } from "react-icons/fa";
+import { useForm } from "react-hook-form";
+import { IoIosClose } from "react-icons/io";
+import { FaqType } from "@/types/faq";
+import { clearObject } from "@/utils";
 import { v4 } from "uuid";
 
-export const AboutForm = ({ data }: { data: AboutType[] }) => {
-  const { size, pop, push } = useCancelStack<AboutType[]>();
+export const FaqForm = ({ data }: { data: FaqType[] }) => {
+  const { size, pop, push } = useCancelStack<FaqType[]>();
   const { onChange, setFormActive, isFormActive } = useFormActive();
-  const { mutateAsync, mutate, isPending } = useUpdateData();
+  const { mutate, mutateAsync, isPending } = useUpdateData();
+  const [selectedIndex, setSelectedIndex] = useState(-1);
   const [showNew, setShowNew] = useState(false);
   const [deletedList, setDeletedList] = useState<number[]>([]);
-  const [selectedIndex, setSelectedIndex] = useState(-1);
-
   const { register, handleSubmit, reset } = useForm();
 
   const onCancel = () => {
-    mutate({ about: pop() });
+    mutate({ faq: pop() });
     setDeletedList([]);
     setFormActive(false);
-  };
-
-  const onDelete = (index: number) => {
-    setFormActive(true);
-    setDeletedList((current) => [...current, index]);
   };
 
   const onSelect = (index: number) => {
@@ -42,11 +36,16 @@ export const AboutForm = ({ data }: { data: AboutType[] }) => {
     return setSelectedIndex(index);
   };
 
+  const onDelete = (index: number) => {
+    setFormActive(true);
+    setDeletedList((current) => [...current, index]);
+  };
+
   const onSubmit = async ({ list }: any) => {
     push(data);
 
     const newData = list
-      ?.map((item: AboutType, index: number) =>
+      ?.map((item: FaqType, index: number) =>
         deletedList.includes(index)
           ? null
           : {
@@ -55,9 +54,9 @@ export const AboutForm = ({ data }: { data: AboutType[] }) => {
             },
       )
       .filter(Boolean)
-      .filter((item: AboutType) => item.title || item.body);
+      .filter((item: FaqType) => item.title || item.body);
 
-    await mutateAsync({ about: newData });
+    await mutateAsync({ faq: newData });
     reset();
     setDeletedList([]);
     setShowNew(false);
@@ -114,13 +113,13 @@ export const AboutForm = ({ data }: { data: AboutType[] }) => {
       {showNew ? (
         <div className="flex flex-col gap-1">
           <Input
-            placeholder="Введите заголовок..."
+            placeholder="Введите вопрос..."
             {...register(`list.${data.length}.title`)}
             className="w-full"
             onChange={onChange}
           />
           <Textarea
-            placeholder="Введите описание..."
+            placeholder="Введите ответ на вопрос..."
             {...register(`list.${data.length}.body`)}
             className="min-h-[150px] w-full"
             onChange={onChange}
@@ -134,7 +133,7 @@ export const AboutForm = ({ data }: { data: AboutType[] }) => {
         >
           <div className="flex items-center justify-center gap-2 rounded-md px-4 py-2 text-backgroundAccent duration-200 hover:bg-gray-300 dark:text-white dark:hover:text-backgroundAccent">
             <FaPlus />
-            <p>Добавить описание</p>
+            <p>Добавить вопрос</p>
           </div>
         </button>
       )}

@@ -1,7 +1,15 @@
 "use client";
 
 import { Accordion, Loader } from "@/components/ui";
-import { HeroForm, AboutForm, ProfessionForm } from "@/components/form";
+import {
+  HeroForm,
+  AboutForm,
+  ProfessionForm,
+  EducationForm,
+  EnterInstituteForm,
+  ReviewForm,
+  FaqForm
+} from "@/components/form";
 import { useData } from "@/services";
 
 const Dashboard = () => {
@@ -27,6 +35,18 @@ const Dashboard = () => {
           </Accordion>
           <Accordion title="Перспективная профессия" size="lg">
             <ProfessionForm data={data.profession} />
+          </Accordion>
+          <Accordion title="Учебный план" size="lg">
+            <EducationForm data={data.educationPlan} />
+          </Accordion>
+          <Accordion title="Как стать студентом программы" size="lg">
+            <EnterInstituteForm data={data.enterInstitute} />
+          </Accordion>
+          <Accordion title="Часто задаваемые вопросы" size="lg">
+            <FaqForm data={data.faq} />
+          </Accordion>
+          <Accordion title="Отзывы" size="lg">
+            <ReviewForm data={data.reviews} />
           </Accordion>
         </div>
       </div>

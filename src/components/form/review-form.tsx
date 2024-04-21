@@ -1,30 +1,29 @@
 "use client";
 
-import { Button, Input, Textarea } from "@/components/ui";
 import { useCancelStack, useFormActive } from "@/hooks";
 import { useUpdateData } from "@/services";
-import { AboutType } from "@/types/about";
+import { ReviewType } from "@/types/review";
 import { clearObject } from "@/utils";
-import clsx from "clsx";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { v4 } from "uuid";
+import { Button, Input, Textarea } from "../ui";
 import { FaPlus } from "react-icons/fa";
 import { IoIosClose } from "react-icons/io";
 import { MdEdit } from "react-icons/md";
-import { v4 } from "uuid";
+import clsx from "clsx";
 
-export const AboutForm = ({ data }: { data: AboutType[] }) => {
-  const { size, pop, push } = useCancelStack<AboutType[]>();
+export const ReviewForm = ({ data }: { data: ReviewType[] }) => {
+  const { size, pop, push } = useCancelStack<ReviewType[]>();
   const { onChange, setFormActive, isFormActive } = useFormActive();
-  const { mutateAsync, mutate, isPending } = useUpdateData();
-  const [showNew, setShowNew] = useState(false);
   const [deletedList, setDeletedList] = useState<number[]>([]);
+  const [showNew, setShowNew] = useState(false);
+  const { mutate, mutateAsync, isPending } = useUpdateData();
   const [selectedIndex, setSelectedIndex] = useState(-1);
-
   const { register, handleSubmit, reset } = useForm();
 
   const onCancel = () => {
-    mutate({ about: pop() });
+    mutate({ reviews: pop() });
     setDeletedList([]);
     setFormActive(false);
   };
@@ -46,7 +45,7 @@ export const AboutForm = ({ data }: { data: AboutType[] }) => {
     push(data);
 
     const newData = list
-      ?.map((item: AboutType, index: number) =>
+      ?.map((item: ReviewType, index: number) =>
         deletedList.includes(index)
           ? null
           : {
@@ -55,9 +54,9 @@ export const AboutForm = ({ data }: { data: AboutType[] }) => {
             },
       )
       .filter(Boolean)
-      .filter((item: AboutType) => item.title || item.body);
+      .filter((item: ReviewType) => item.author || item.message || item.role);
 
-    await mutateAsync({ about: newData });
+    await mutateAsync({ reviews: newData });
     reset();
     setDeletedList([]);
     setShowNew(false);
@@ -69,11 +68,11 @@ export const AboutForm = ({ data }: { data: AboutType[] }) => {
       onSubmit={handleSubmit(onSubmit)}
       className="mx-auto my-10 flex w-full flex-col gap-5 text-[14px] sm:text-[16px]"
     >
-      {data.map((item, index) => {
+      {data.map((data, index) => {
         if (deletedList.includes(index)) return null;
 
         return (
-          <div key={item.id} className="flex flex-col gap-2">
+          <div key={index} className="flex flex-col gap-2">
             <div className="flex flex-row">
               <Button
                 onClick={() => onDelete(index)}
@@ -85,8 +84,8 @@ export const AboutForm = ({ data }: { data: AboutType[] }) => {
                 <IoIosClose size={40} />
               </Button>
               <Input
-                placeholder={item.title}
-                {...register(`list.${index}.title`)}
+                placeholder={data.author}
+                {...register(`list.${index}.author`)}
                 className="w-full"
                 onChange={onChange}
               />
@@ -101,12 +100,20 @@ export const AboutForm = ({ data }: { data: AboutType[] }) => {
               </Button>
             </div>
             {index === selectedIndex && (
-              <Textarea
-                className="min-h-[200px] w-full"
-                placeholder={item.body}
-                {...register(`list.${index}.body`)}
-                onChange={onChange}
-              />
+              <div className="flex flex-col gap-1">
+                <Input
+                  placeholder={data.role}
+                  {...register(`list.${index}.role`)}
+                  className="w-full"
+                  onChange={onChange}
+                />
+                <Textarea
+                  className="min-h-[200px] w-full"
+                  placeholder={data.message}
+                  {...register(`list.${index}.message`)}
+                  onChange={onChange}
+                />
+              </div>
             )}
           </div>
         );
@@ -114,14 +121,20 @@ export const AboutForm = ({ data }: { data: AboutType[] }) => {
       {showNew ? (
         <div className="flex flex-col gap-1">
           <Input
-            placeholder="Введите заголовок..."
-            {...register(`list.${data.length}.title`)}
+            placeholder="Введите имя..."
+            {...register(`list.${data.length}.author`)}
+            className="w-full"
+            onChange={onChange}
+          />
+          <Input
+            placeholder="Введите профессию..."
+            {...register(`list.${data.length}.role`)}
             className="w-full"
             onChange={onChange}
           />
           <Textarea
-            placeholder="Введите описание..."
-            {...register(`list.${data.length}.body`)}
+            placeholder="Введите отзыв..."
+            {...register(`list.${data.length}.message`)}
             className="min-h-[150px] w-full"
             onChange={onChange}
           />
@@ -134,7 +147,7 @@ export const AboutForm = ({ data }: { data: AboutType[] }) => {
         >
           <div className="flex items-center justify-center gap-2 rounded-md px-4 py-2 text-backgroundAccent duration-200 hover:bg-gray-300 dark:text-white dark:hover:text-backgroundAccent">
             <FaPlus />
-            <p>Добавить описание</p>
+            <p>Добавить отзыв</p>
           </div>
         </button>
       )}

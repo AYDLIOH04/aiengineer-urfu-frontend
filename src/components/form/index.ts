@@ -3,3 +3,7 @@ export * from "./hero-form";
 export * from "./about-form";
 export * from "./profession-form";
 export * from "./login-form";
+export * from "./education-form";
+export * from "./enter-institute-form";
+export * from "./review-form";
+export * from "./faq-form";
