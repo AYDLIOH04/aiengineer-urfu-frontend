@@ -74,30 +74,36 @@ export const ReviewForm = ({ data }: { data: ReviewType[] }) => {
         return (
           <div key={index} className="flex flex-col gap-2">
             <div className="flex flex-row">
-              <Button
+              <button
                 onClick={() => onDelete(index)}
                 type="button"
-                className={clsx("rounded-r-none px-1 py-0 sm:px-1 sm:py-0", {
-                  "rounded-b-none": index === selectedIndex,
-                })}
+                className={clsx(
+                  "flex cursor-pointer items-center justify-center rounded-md rounded-r-none bg-orange px-1 py-0 text-[16px] font-semibold text-white duration-200 hover:opacity-80 disabled:opacity-50 dark:text-backgroundAccent sm:px-1 sm:py-0 md:text-[22px]",
+                  {
+                    "rounded-b-none": index === selectedIndex,
+                  },
+                )}
               >
                 <IoIosClose size={40} />
-              </Button>
+              </button>
               <Input
                 placeholder={data.author}
                 {...register(`list.${index}.author`)}
                 className="w-full"
                 onChange={onChange}
               />
-              <Button
+              <button
                 onClick={() => onSelect(index)}
                 type="button"
-                className={clsx("rounded-l-none px-4 sm:px-4", {
-                  "rounded-b-none": index === selectedIndex,
-                })}
+                className={clsx(
+                  "flex cursor-pointer items-center justify-center rounded-md rounded-l-none bg-orange px-4 py-0 text-[16px] font-semibold text-white duration-200 hover:opacity-80 disabled:opacity-50 dark:text-backgroundAccent sm:px-4 sm:py-0 md:text-[22px]",
+                  {
+                    "rounded-b-none": index === selectedIndex,
+                  },
+                )}
               >
                 <MdEdit size={20} />
-              </Button>
+              </button>
             </div>
             {index === selectedIndex && (
               <div className="flex flex-col gap-1">
